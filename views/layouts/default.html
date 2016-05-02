@@ -51,14 +51,6 @@
 
     <r:partial name="custom-patterns/so-slots--sitewide" />
 
-    <r:set_var name="default_content_supernav">
-      <r:site:data name="default_content_supernav" />
-    </r:set_var>
-
-    <r:if v1="{$default_content_supernav}" v2="true" op="=">
-      <r:partial name="custom-patterns/so-super-nav" />
-    </r:if>
-
     <div class="so-footer <r:page:content name="so-background-color--footer" /> background">
       <div class="so-footer__container">
         <r:partial name="patterns/wvu-footer" />

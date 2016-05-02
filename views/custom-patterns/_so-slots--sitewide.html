@@ -1,37 +1,21 @@
 <!-- Slots -->
 
-<r:set_var name="slotValue__base" value="{$slotValue__base}" default="lede" />
+<r:set_var name="noPattern">
+  custom-patterns/none
+</r:set_var>
 
-<r:loop:each times="2">
+<r:set_var name="patternName8" default="{$noPattern}" />
+<r:set_var name="patternName9" default="{$noPattern}" />
+<r:set_var name="patternName10" default="{$noPattern}" />
 
-  <r:set_var name="slot_number">default_content_0<r:item /></r:set_var>
+<r:set_var name="patternName8">
+  custom-patterns/so-<r:page:data name="default_content_01" />
+</r:set_var>
 
-  <r:set_var name="slot_value">
-    <r:site:data name="{$slot_number}" />
-  </r:set_var>
+<r:set_var name="patternName9">
+  custom-patterns/so-<r:page:data name="default_content_02" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="anytych" op="=">
-    <r:partial name="custom-patterns/so-magic-anytych--sitewide" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="action_hero" op="=">
-    <r:partial name="custom-patterns/so-action-hero--sitewide" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="featurettes" op="=">
-    <r:partial name="custom-patterns/so-featurettes" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="social_media" op="=">
-    <r:partial name="custom-patterns/so-social-media" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="quicklinks" op="=">
-    <r:partial name="custom-patterns/so-quicklinks--sitewide" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="twitter_widget" op="=">
-    <r:partial name="custom-patterns/so-twitter-widget" />
-  </r:if>
-
-</r:loop:each>
+<r:set_var name="patternName10">
+  custom-patterns/so-<r:page:data name="default_content_03" />
+</r:set_var>

@@ -14,7 +14,7 @@ custom_site_attributes:
   - nav
   - default_content_01
   - default_content_02
-  - default_content_supernav
+  - default_content_03
 
 ## Template Config
 # Specify which templates show up by default when creating a page
