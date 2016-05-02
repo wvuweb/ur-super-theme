@@ -1,101 +1,47 @@
-<!-- Slots -->
+<r:set_var name="noPattern">
+  custom-patterns/none
+</r:set_var>
 
-<r:set_var name="slotValue__base" value="{$slotValue__base}" default="lede" />
+<r:set_var name="patternName1" default="{$noPattern}" />
+<r:set_var name="patternName2" default="{$noPattern}" />
+<r:set_var name="patternName3" default="{$noPattern}" />
+<r:set_var name="patternName4" default="{$noPattern}" />
+<r:set_var name="patternName5" default="{$noPattern}" />
+<r:set_var name="patternName6" default="{$noPattern}" />
+<r:set_var name="patternName7" default="{$noPattern}" />
 
-<r:loop:each times="7">
+<r:set_var name="patternName1">
+  custom-patterns/so-<r:page:data name="slot_01" />
+</r:set_var>
 
-  <r:set_var name="slot_number">slot_0<r:item /></r:set_var>
+<r:set_var name="patternName2">
+  custom-patterns/so-<r:page:data name="slot_02" />
+</r:set_var>
 
-  <r:set_var name="slot_value">
-    <r:page:data name="{$slot_number}" />
-  </r:set_var>
+<r:set_var name="patternName3">
+  custom-patterns/so-<r:page:data name="slot_03" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="admin_hero" op="=">
-    <r:partial name="custom-patterns/so-admin-hero" />
-  </r:if>
+<r:set_var name="patternName4">
+  custom-patterns/so-<r:page:data name="slot_04" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="lede" op="=">
-    <r:partial name="custom-patterns/so-lede" />
-  </r:if>
+<r:set_var name="patternName5">
+  custom-patterns/so-<r:page:data name="slot_05" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="anytych" op="=">
-    <r:partial name="custom-patterns/so-magic-anytych" />
-  </r:if>
+<r:set_var name="patternName6">
+  custom-patterns/so-<r:page:data name="slot_06" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="anytych_2" op="=">
-    <r:partial name="custom-patterns/so-magic-anytych-2" />
-  </r:if>
+<r:set_var name="patternName7">
+  custom-patterns/so-<r:page:data name="slot_07" />
+</r:set_var>
 
-  <r:if v1="{$slot_value}" v2="anytych_3" op="=">
-    <r:partial name="custom-patterns/so-magic-anytych-3" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="anytych_4" op="=">
-    <r:partial name="custom-patterns/so-magic-anytych-4" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="profiles" op="=">
-    <r:partial name="custom-patterns/so-featurettes--profiles" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="action_hero" op="=">
-    <r:partial name="custom-patterns/so-action-hero" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="action_hero_sitewide" op="=">
-    <r:partial name="custom-patterns/so-action-hero--sitewide" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="backpage_body" op="=">
-    <r:partial name="custom-patterns/so-backpage-body" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="video" op="=">
-    <r:partial name="custom-patterns/so-video" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="video_sitewide" op="=">
-    <r:partial name="custom-patterns/so-video--sitewide" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="featurettes" op="=">
-    <r:partial name="custom-patterns/so-featurettes" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="featurettes_2" op="=">
-    <r:partial name="custom-patterns/so-featurettes-2" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="testimonial" op="=">
-    <r:partial name="custom-patterns/so-testimonial" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="adverts" op="=">
-    <r:partial name="custom-patterns/so-adverts" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="social_media" op="=">
-    <r:partial name="custom-patterns/so-social-media" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="calendar" op="=">
-    <r:partial name="custom-patterns/so-calendar-widget" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="calendar_manual" op="=">
-    <r:partial name="custom-patterns/so-calendar-widget--manual" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="agenda" op="=">
-    <r:partial name="custom-patterns/cs-event-agenda" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="quicklinks" op="=">
-    <r:partial name="custom-patterns/so-quicklinks" />
-  </r:if>
-
-  <r:if v1="{$slot_value}" v2="twitter_widget" op="=">
-    <r:partial name="custom-patterns/so-twitter-widget" />
-  </r:if>
-
-</r:loop:each>
+<r:partial name="{$patternName1}" />
+<r:partial name="{$patternName2}" />
+<r:partial name="{$patternName3}" />
+<r:partial name="{$patternName4}" />
+<r:partial name="{$patternName5}" />
+<r:partial name="{$patternName6}" />
+<r:partial name="{$patternName7}" />
