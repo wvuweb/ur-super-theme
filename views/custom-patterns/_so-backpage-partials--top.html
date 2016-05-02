@@ -1,66 +1,23 @@
-<r:set_var name="backpage_header" value="{$backpage_header}" default="true">
-  <r:page:data name="backpage_header" />
+<r:set_var name="noPattern">
+  custom-patterns/none
 </r:set_var>
 
-<r:if v1="{$backpage_header}" v2="true" op="=">
-  <r:partial name="custom-patterns/so-backpage-header" />
-</r:if>
+<r:set_var name="patternName1" default="{$noPattern}" />
+<r:set_var name="patternName2" default="{$noPattern}" />
+<r:set_var name="patternName3" default="{$noPattern}" />
 
-
-<!-- Slot 1 -->
-
-<r:set_var name="slot_01">
-  <r:page:data name="slot_01" />
+<r:set_var name="patternName1">
+  custom-patterns/so-<r:page:data name="slot_01" />
 </r:set_var>
 
-<r:if v1="{$slot_01}" v2="lede" op="=">
-  <r:partial name="custom-patterns/so-lede" />
-</r:if>
-
-<r:if v1="{$slot_01}" v2="video" op="=">
-  <r:partial name="custom-patterns/so-video" />
-</r:if>
-
-<r:if v1="{$slot_01}" v2="hero" op="=">
-  <r:partial name="custom-patterns/so-hero" />
-</r:if>
-
-<r:if v1="{$slot_01}" v2="featurettes" op="=">
-  <r:partial name="custom-patterns/so-featurettes" />
-</r:if>
-
-<!-- Slot 2 -->
-
-<r:set_var name="slot_02">
-  <r:page:data name="slot_02" />
+<r:set_var name="patternName2">
+  custom-patterns/so-<r:page:data name="slot_02" />
 </r:set_var>
 
-<r:if v1="{$slot_02}" v2="lede" op="=">
-  <r:partial name="custom-patterns/so-lede" />
-</r:if>
-
-<r:if v1="{$slot_02}" v2="video" op="=">
-  <r:partial name="custom-patterns/so-video" />
-</r:if>
-
-<r:if v1="{$slot_02}" v2="featurettes" op="=">
-  <r:partial name="custom-patterns/so-featurettes" />
-</r:if>
-
-<!-- Slot 3 -->
-
-<r:set_var name="slot_03">
-  <r:page:data name="slot_03" />
+<r:set_var name="patternName3">
+  custom-patterns/so-<r:page:data name="slot_03" />
 </r:set_var>
 
-<r:if v1="{$slot_03}" v2="lede" op="=">
-  <r:partial name="custom-patterns/so-lede" />
-</r:if>
-
-<r:if v1="{$slot_03}" v2="video" op="=">
-  <r:partial name="custom-patterns/so-video" />
-</r:if>
-
-<r:if v1="{$slot_03}" v2="featurettes" op="=">
-  <r:partial name="custom-patterns/so-featurettes" />
-</r:if>
+<r:partial name="{$patternName1}" />
+<r:partial name="{$patternName2}" />
+<r:partial name="{$patternName3}" />

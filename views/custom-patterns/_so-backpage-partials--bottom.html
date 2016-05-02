@@ -1,62 +1,29 @@
-<!-- Slot 8 -->
+<r:set_var name="noPattern">
+  custom-patterns/none
+</r:set_var>
 
+<r:set_var name="patternName4" default="{$noPattern}" />
+<r:set_var name="patternName5" default="{$noPattern}" />
+<r:set_var name="patternName6" default="{$noPattern}" />
+<r:set_var name="patternName7" default="{$noPattern}" />
 
-<r:if v1="{$slot_04}" v2="testimonial" op="=">
-  <r:partial name="custom-patterns/so-testimonial" />
-</r:if>
+<r:set_var name="patternName1">
+  custom-patterns/so-<r:page:data name="slot_04" />
+</r:set_var>
 
-<r:if v1="{$slot_04}" v2="adverts" op="=">
-  <r:partial name="custom-patterns/so-adverts" />
-</r:if>
+<r:set_var name="patternName2">
+  custom-patterns/so-<r:page:data name="slot_05" />
+</r:set_var>
 
-<r:if v1="{$slot_04}" v2="social_media" op="=">
-  <r:partial name="custom-patterns/so-social-media" />
-</r:if>
+<r:set_var name="patternName3">
+  custom-patterns/so-<r:page:data name="slot_06" />
+</r:set_var>
 
-<r:if v1="{$slot_04}" v2="calendar" op="=">
-  <r:partial name="custom-patterns/so-calendar-widget" />
-</r:if>
+<r:set_var name="patternName3">
+  custom-patterns/so-<r:page:data name="slot_07" />
+</r:set_var>
 
-<r:if v1="{$slot_04}" v2="quicklinks" op="=">
-  <r:partial name="custom-patterns/so-quicklinks" />
-</r:if>
-
-<r:if v1="{$slot_04}" v2="featurettes" op="=">
-  <r:partial name="custom-patterns/so-featurettes" />
-</r:if>
-
-<r:if v1="{$slot_value}" v2="anytych_sitewide" op="=">
-  <r:partial name="custom-patterns/so-magic-anytych--sitewide" />
-</r:if>
-
-
-<!-- Slot 9 -->
-
-
-<r:if v1="{$slot_05}" v2="testimonial" op="=">
-  <r:partial name="custom-patterns/so-testimonial" />
-</r:if>
-
-<r:if v1="{$slot_05}" v2="adverts" op="=">
-  <r:partial name="custom-patterns/so-adverts" />
-</r:if>
-
-<r:if v1="{$slot_05}" v2="social_media" op="=">
-  <r:partial name="custom-patterns/so-social-media" />
-</r:if>
-
-<r:if v1="{$slot_05}" v2="calendar" op="=">
-  <r:partial name="custom-patterns/so-calendar-widget" />
-</r:if>
-
-<r:if v1="{$slot_05}" v2="quicklinks" op="=">
-  <r:partial name="custom-patterns/so-quicklinks" />
-</r:if>
-
-<r:if v1="{$slot_05}" v2="featurettes" op="=">
-  <r:partial name="custom-patterns/so-featurettes" />
-</r:if>
-
-<r:if v1="{$slot_value}" v2="anytych_sitewide" op="=">
-  <r:partial name="custom-patterns/so-magic-anytych--sitewide" />
-</r:if>
+<r:partial name="{$patternName4}" />
+<r:partial name="{$patternName5}" />
+<r:partial name="{$patternName6}" />
+<r:partial name="{$patternName7}" />
