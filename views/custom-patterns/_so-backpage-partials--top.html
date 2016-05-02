@@ -6,14 +6,6 @@
   <r:partial name="custom-patterns/so-backpage-header" />
 </r:if>
 
-<r:set_var name="noPattern">
-  custom-patterns/none
-</r:set_var>
-
-<r:set_var name="patternName1" />
-<r:set_var name="patternName2" default="{$noPattern}" />
-<r:set_var name="patternName3" default="{$noPattern}" />
-
 <r:set_var name="patternName1" default="{$noPattern}">
   custom-patterns/so-<r:page:data name="slot_01" />
 </r:set_var>
