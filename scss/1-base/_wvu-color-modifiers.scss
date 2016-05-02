@@ -121,8 +121,7 @@ $pms-115-c: #FDDA24;
 }
 
 @mixin wvu-blue-background {
-  color: white; background-color: $wvu-blue;
-  -webkit-font-smoothing: antialiased;
+  @include wvu-dark-background($wvu-blue, white);
 }
 
 .u-wvu-gold {
