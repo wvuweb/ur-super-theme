@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
+    <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
+    <meta name="description" content="<r:page:meta_description />" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="<r:site:data name="google_site_verification" />" />
+
+    <meta property="og:title" content="<r:site_name /> | <r:page:first_non_blank_attr names="alternate_name,name" />" />
+    <meta property="og:description" content="<r:page:meta_description />" />
+    <r:set_var name="thumbnailurl">
+      <r:page:slug />-thumbnail
+    </r:set_var>
+    <r:files:each limit="1" labels="{$thumbnailurl}" types="image" random="true">
+      <meta property="og:image" content="<r:file:image_url size="1200x630" />" />
+      <meta name="twitter:image" content="<r:page:">
+    </r:files:each>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="<r:page:url />" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<r:site_name />">
+    <meta name="twitter:creator" content="<r:site:data name="twitter_handle" />">
+    <meta name="twitter:title" content="<r:page:first_non_blank_attr names="alternate_name,name" />">
+    <meta name="twitter:description" content="<r:page:meta_description />">
+
+    <r:include_stylesheet name="styles" />
+
+  </head>
+  <body class="<r:page:template:name /> page--<r:page:id /> page--<r:page:slug /> <r:edit_mode_only>page--edit-mode</r:edit_mode_only>">
+
+    <a class="wvu-skip-nav" href="#maincontent">Skip to main content</a>
+
+    <r:set_var name="nav" value="{$nav}" default="nav">
+      <r:site:data name="nav" />
+    </r:set_var>
+
+    <r:if v1="{$nav}" v2="nav" op="=">
+      <r:partial name="custom-patterns/wvu-masthead-nav-search-toggle" />
+    </r:if>
+
+    <r:if v1="{$nav}" v2="nav_dropdowns" op="=">
+      <r:partial name="custom-patterns/wvu-masthead-nav-search-toggle--dropdowns" />
+    </r:if>
+
+    <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
+    <r:yield />
+
+    <r:partial name="custom-patterns/so-slots--sitewide" />
+
+    <r:set_var name="default_content_supernav">
+      <r:site:data name="default_content_supernav" />
+    </r:set_var>
+
+    <r:if v1="{$default_content_supernav}" v2="true" op="=">
+      <r:partial name="custom-patterns/so-super-nav" />
+    </r:if>
+
+    <div class="so-footer <r:page:content name="so-background-color--footer" /> background">
+      <div class="so-footer__container">
+        <r:partial name="patterns/wvu-footer" />
+      </div>
+    </div>
+
+    <r:edit_mode_only>
+      <div class="so-instructions">
+        <p><strong>Instructions for Footer:</strong> Put your organization&rsquo;s contact info here.</p>
+        <p><strong>Background Color:</strong> <r:editable_region name="so-background-color--footer" scope="site" /></p>
+      </div>
+    </r:edit_mode_only>
+
+    <script src="https://fast.fonts.net/jsapi/3f7b1335-4c99-4404-92cf-3ba0e32e8f17.js" defer></script> <r:comment><!-- Helvetica Neue Light & Bold Condensed web font, valid for *.wvu.edu, *.wvutech.edu, & localhost --></r:comment>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+    <script>window.jQuery || document.write('<script src="https://code.wvu.edu/public/vendor/jquery/1.11.1/jquery.min.js" defer><\/script>')</script>
+
+    <script src="javascripts/all.js" defer></script>
+
+    <r:yield name="page_js">
+      <r:content />
+    </r:yield>
+
+    <script type="text/javascript" defer>
+      // ##### Simple example 1 #####
+      // A simple example to get my latest tweet and write to a HTML element with
+      // id "example1". Also automatically hyperlinks URLS and user mentions and
+      // hashtags.
+      var config1 = {
+        "id": '<r:site:data name="twitter_widget_id" />',
+        "domId": 'example1',
+        "maxTweets": 5,
+        "enableLinks": true
+      };
+      twitterFetcher.fetch(config1);
+    </script>
+
+  </body>
+</html>

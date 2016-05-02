@@ -1,0 +1,12 @@
+.so-footer {
+  background-color: shade($pms-warm-gray-11, 10%);
+  color: white;
+  a, a:visited {
+    color: white;
+  }
+}
+
+.so-footer__container {
+  @include outer-container();
+  @include u-wvu-container-padding();
+}

@@ -1,0 +1,24 @@
+<r:page:if_has_content_for region="wvu-sidebar" always_show_in_edit_mode="true">
+
+  <aside class="wvu-sidebar">
+
+    <r:edit_mode_only>
+      <r:editable_region name="wvu-sidebar">
+        <h3>Sidebar</h3>
+      </r:editable_region>
+      <div class="so-region-label">
+        Leave this if you want the sidebar to show up. The "Sidebar" label will not display.
+      </div>
+    </r:edit_mode_only>
+
+    <r:page:if_has_content_for region="wvu-sub-nav__label" always_show_in_edit_mode="true">
+      <r:edit_mode_only>
+        <h3><r:editable_region name="wvu-sub-nav__label" type="simple">Sub-Nav</r:editable_region></h3>
+      </r:edit_mode_only>
+      <div class="wvu-sub-nav">
+        <r:ancestor_menu start_depth="2" max_depth="3" ul_class="nav-secondary" active_class="nav-secondary--current-page" open_class="nav-secondary--open" />
+      </div> <!-- /.wvu-sub-nav -->
+    </r:page:if_has_content_for>
+
+  </aside>
+</r:page:if_has_content_for>
