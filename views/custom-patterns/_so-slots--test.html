@@ -1,0 +1,11 @@
+<r:set_var name="patternName1" default="lede">
+  <r:page:data name="pattern_name_1" />
+</r:set_var>
+
+<r:set_var name="patternName2" default="lede">
+  <r:page:data name="pattern_name_2" />
+</r:set_var>
+
+<r:partial name="custom-patterns/{$patternName1}" />
+
+<r:partial name="custom-patterns/{$patternName2}" />
