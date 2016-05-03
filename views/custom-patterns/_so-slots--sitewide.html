@@ -1,20 +1,19 @@
-<r:if expr="{{ NOT(BLANK(default_content_01)) }}">
-  <r:set_var name="patternName8">
-    custom-patterns/so-<r:page:data name="default_content_01" />
-  </r:set_var>
-  <r:partial name="{$patternName8}" />
-</r:if>
+<!-- Slots -->
 
-<r:if expr="{{ NOT(BLANK(default_content_02)) }}">
-  <r:set_var name="patternName9">
-    custom-patterns/so-<r:page:data name="default_content_02" />
-  </r:set_var>
-  <r:partial name="{$patternName9}" />
-</r:if>
+<r:set_var name="noPattern">
+  custom-patterns/none
+</r:set_var>
 
-<r:if expr="{{ NOT(BLANK(default_content_03)) }}">
-  <r:set_var name="patternName10">
-    custom-patterns/so-<r:page:data name="default_content_03" />
-  </r:set_var>
-  <r:partial name="{$patternName10}" />
-</r:if>
+<r:set_var name="patternName8" default="{$noPattern}" />
+<r:set_var name="patternName9" default="{$noPattern}" />
+
+<r:set_var name="patternName8">
+  custom-patterns/so-<r:site:data name="default_content_01" />
+</r:set_var>
+
+<r:set_var name="patternName9">
+  custom-patterns/so-<r:site:data name="default_content_02" />
+</r:set_var>
+
+<r:partial name="{$patternName8}" />
+<r:partial name="{$patternName9}" />
