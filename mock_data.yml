@@ -1,3 +1,5 @@
+edit_mode: true
+
 shared_themes:
   "Code":
     "layouts/browser-update-org--v2": "code"
@@ -230,6 +232,8 @@ page:
     wvu-profile__short-description: "This is a short description for this profile. <%= Faker::Hacker.say_something_smart %>"
     wvu-profile__photo: |
       <img src="<%= Faker::Avatar.image %>" alt=" " />
+  data:
+    slot_01: magic-anytych
 
 pages:
   - id: 2
