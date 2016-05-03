@@ -1,4 +1,3 @@
-
 <r:set_var name="backpage_header" value="{$backpage_header}" default="true">
   <r:page:data name="backpage_header" />
 </r:set_var>
@@ -7,26 +6,23 @@
   <r:partial name="custom-patterns/so-backpage-header" />
 </r:if>
 
+<r:if expr="{{ NOT(BLANK(slot_01)) }}">
+  <r:set_var name="patternName1">
+    custom-patterns/so-<r:page:data name="slot_01" />
+  </r:set_var>
+  <r:partial name="{$patternName1}" />
+</r:if>
 
+<r:if expr="{{ NOT(BLANK(slot_02)) }}">
+  <r:set_var name="patternName2">
+    custom-patterns/so-<r:page:data name="slot_02" />
+  </r:set_var>
+  <r:partial name="{$patternName2}" />
+</r:if>
 
-<r:comment>
-
-<r:set_var name="noPatternT">
-  custom-patterns/none
-</r:set_var>
-
-<r:set_var name="patternName2">
-  custom-patterns/so-<r:page:data name="slot_02" />
-</r:set_var>
-
-<r:set_var name="patternName3">
-  custom-patterns/so-<r:page:data name="slot_03" />
-</r:set_var>
-
-
-<r:var name="patternName1" />
-<r:partial name="{$patternName2}" />
-<r:var name="patternName2" />
-<r:partial name="{$patternName3}" />
-<r:var name="patternName3" />
-</r:comment>
+<r:if expr="{{ NOT(BLANK(slot_03)) }}">
+  <r:set_var name="patternName3">
+    custom-patterns/so-<r:page:data name="slot_03" />
+  </r:set_var>
+  <r:partial name="{$patternName3}" />
+</r:if>
