@@ -10,8 +10,12 @@
   custom-patterns/none
 </r:set_var>
 
+<r:set_var name="slot01name">
+  <r:page:data name="slot_01" />
+</r:set_var>
+
 <r:set_var name="patternName1" default="custom-patterns/none">
-  custom-patterns/so-<r:page:data name="slot_01" />
+  custom-patterns/so-<r:var name="slot01name" />
 </r:set_var>
 
 <r:set_var name="patternName2" default="custom-patterns/none">
