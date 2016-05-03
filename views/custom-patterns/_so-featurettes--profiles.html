@@ -22,7 +22,7 @@
             <div class="so-featurettes__featurette">
 
               <r:set_var name="soFeaturettesInfoProfilesWide" default="nophoto" />
-              <r:page:if_has_content_for region="so-page-meta__thumbnail">
+              <r:page:if_has_content_for region="wvu-profile__photo">
                 <div class="so-featurettes__photo">
                   <a href="<r:page:unless_has_content_for region="so-featurettes__url"><r:page:url /></r:page:unless_has_content_for><r:page:if_has_content_for region="so-featurettes__url"><r:page:content name="so-featurettes__url" /></r:page:if_has_content_for>"><r:page:content name="wvu-profile__photo" /></a>
                 </div>
