@@ -17,6 +17,7 @@
   <r:partial name="{$patternName1}" />
 </r:if>
 
+<r:comment>
 <r:set_var name="patternName2">
   custom-patterns/so-<r:page:data name="slot_02" />
 </r:set_var>
@@ -31,3 +32,4 @@
 <r:var name="patternName2" />
 <r:partial name="{$patternName3}" />
 <r:var name="patternName3" />
+</r:comment>
