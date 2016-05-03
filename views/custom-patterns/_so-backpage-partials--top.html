@@ -7,12 +7,6 @@
   <r:partial name="custom-patterns/so-backpage-header" />
 </r:if>
 
-<r:if expr="{{ NOT(BLANK(slot_01)) }}">
-  <r:set_var name="patternName1">
-    custom-patterns/so-<r:page:data name="slot_01" />
-  </r:set_var>
-  <r:partial name="{$patternName1}" />
-</r:if>
 
 <r:comment>
 
