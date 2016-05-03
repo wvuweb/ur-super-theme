@@ -10,7 +10,11 @@
   custom-patterns/none
 </r:set_var>
 
-<r:if v1="{page:data:slot_01}" v2="" operator="!=">
+<r:set_var name="s1content">
+  <r:page:data name="slot_01">
+</r:set_var>
+
+<r:if v1="{$s1content}" v2="" operator="!=">
   <r:set_var name="patternName1">
     custom-patterns/so-<r:page:data name="slot_01" />
   </r:set_var>
