@@ -10,13 +10,11 @@
   custom-patterns/none
 </r:set_var>
 
-<r:set_var name="patternName1" default="{$noPatternT}" />
-<r:set_var name="patternName2" default="{$noPatternT}" />
-<r:set_var name="patternName3" default="custom-patterns/none" />
-
-<r:set_var name="patternName1">
-  custom-patterns/so-<r:page:data name="slot_01" />
-</r:set_var>
+<r:if v1="{page:data:slot_01}" v2="" operator="!=">
+  <r:set_var name="patternName1">
+    custom-patterns/so-<r:page:data name="slot_01" />
+  </r:set_var>
+</r:if>
 
 <r:set_var name="patternName2">
   custom-patterns/so-<r:page:data name="slot_02" />
