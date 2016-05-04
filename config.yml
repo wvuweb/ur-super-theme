@@ -8,6 +8,10 @@ custom_site_attributes:
   - google_site_verification
   - masthead_color
   - twitter_handle
+  - facebook_url
+  - linkedin_url
+  - rss_url
+  - youtube_url
   - twitter_widget_id
   - calendar_feed
   - jquery_defer
