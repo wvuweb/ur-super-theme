@@ -1,6 +1,10 @@
 <div class="wvu-nav__social-media-icons">
   <div class="wvu-nav__social-media-icons-container">
 
+    <r:if expr="{{ NOT(BLANK(facebook_url)) }}">
+      <a href="<r:site:data name="facebook_url" />" />"><img src="https://patterns.wvu.edu/images/social-media-icons/facebook.svg" alt="Facebook icon" /></a>
+    </r:if>
+
     <r:edit_mode_only>
       <r:editable_region name="fb-link" scope="site" type="simple">
         Put Facebook URL here or delete me.
