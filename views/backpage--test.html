@@ -32,3 +32,25 @@ custom_data_attributes:
 <r:partial name="custom-patterns/so-backpage-body" />
 
 <r:partial name="custom-patterns/so-backpage-partials--bottom" />
+
+
+<r:if expr="{{ NOT(BLANK(default_content_01)) }}">
+  <r:set_var name="patternNameD1">
+    custom-patterns/so-<r:page:data name="default_content_01" />
+  </r:set_var>
+  <r:partial name="{$patternNameD1}" />
+</r:if>
+
+<r:if expr="{{ NOT(BLANK(default_content_02)) }}">
+  <r:set_var name="patternNameD2">
+    custom-patterns/so-<r:page:data name="default_content_02" />
+  </r:set_var>
+  <r:partial name="{$patternNameD2}" />
+</r:if>
+
+<r:if expr="{{ NOT(BLANK(default_content_03)) }}">
+  <r:set_var name="patternNameD3">
+    custom-patterns/so-<r:page:data name="default_content_03" />
+  </r:set_var>
+  <r:partial name="{$patternNameD3}" />
+</r:if>
