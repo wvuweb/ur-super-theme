@@ -69,4 +69,9 @@
       }
     }
   }
+  .so-admin-hero__container {
+    &:before {
+      display: none;
+    }
+  }
 }
