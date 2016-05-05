@@ -42,17 +42,17 @@
         Put Twitter URL here or delete me.
       </r:editable_region>
     </r:edit_mode_only>
-    <r:page:if_has_content_for region="tw" always_show_in_edit_mode="true">
+    <r:page:if_has_content_for region="tw-link" always_show_in_edit_mode="true">
       <a href="<r:page:content name="tw-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/twitter.svg" alt="Twitter icon" /></a>
     </r:page:if_has_content_for>
 
     <r:edit_mode_only>
-      <r:editable_region name="yt-link" scope="site">
+      <r:editable_region name="ut-link" scope="site" type="simple">
         Put YouTube URL here or delete me.
       </r:editable_region>
     </r:edit_mode_only>
-    <r:page:if_has_content_for region="yt-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="yt-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/youtube.svg" alt="YouTube icon" /></a>
+    <r:page:if_has_content_for region="ut-link" always_show_in_edit_mode="true">
+      <a href="<r:page:content name="ut-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/youtube.svg" alt="YouTube icon" /></a>
     </r:page:if_has_content_for>
 
   </div>
