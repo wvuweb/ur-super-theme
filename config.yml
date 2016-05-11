@@ -11,6 +11,7 @@ custom_site_attributes:
   - facebook_url
   - instagram_url
   - linkedin_url
+  - twitter_url
   - rss_url
   - youtube_url
   - twitter_widget_id
