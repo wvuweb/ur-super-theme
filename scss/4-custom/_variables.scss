@@ -12,7 +12,7 @@ $wvu-shout-font-size: 4.5em;
 $wvu-shout-margin: 0 0 .5em;
 $wvu-anytych-header-margin: 0 0 .5em;
 
-@mixin so-vignetting($wvu-hero-vignetting-transparency) {
+@mixin so-vignetting() {
   &:before {
     content: '';
     position: absolute;
@@ -20,7 +20,7 @@ $wvu-anytych-header-margin: 0 0 .5em;
     right: 0;
     bottom: 0;
     left: 0;
-    background: radial-gradient(farthest-side at 90% 55%, transparent, shade(black, $wvu-hero-vignetting-transparency));
+    background: radial-gradient(farthest-side at 90% 55%, transparent, transparent, transparent, #000);
     opacity: 0.85;
     z-index: 1;
   }

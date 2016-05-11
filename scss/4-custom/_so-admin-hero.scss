@@ -17,6 +17,9 @@
       z-index: -3;
     }
   }
+  h1, p, a {
+    text-shadow: 1px 1px 1px #000000;
+  }
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -41,7 +44,7 @@
 .so-admin-hero__container {
   @include outer-container();
   @include u-wvu-container-padding();
-  @include so-vignetting(5%);
+  @include so-vignetting();
 }
 
 .so-admin-hero__copy {
