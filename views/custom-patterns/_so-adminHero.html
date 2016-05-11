@@ -1,3 +1,7 @@
+<r:set_var name="bgurl">
+  <r:page:slug />-hero-background
+</r:set_var>
+
 <div class="so-admin-hero" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>);">
   <div class="so-admin-hero__container">
     <div class="so-admin-hero__copy <r:page:unless_has_content_for region="so-admin-hero__links">so-admin-hero__copy--wide</r:page:unless_has_content_for>">
