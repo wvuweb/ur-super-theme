@@ -3,12 +3,16 @@
   color: white;
   overflow: hidden;
   position: relative;
+  a {
+    color: $wvu-gold;
+  }
   h1, h2, h3, p, ul {
     color: white;
     position: relative;
     z-index: 3;
   }
   h1 {
+    font-size: 3em;
     @include so-gold-slash();
     &:before {
       background-size: 292px;
@@ -38,6 +42,9 @@
         }
       }
     }
+  }
+  p {
+    font-size: 1.5em;
   }
 }
 
