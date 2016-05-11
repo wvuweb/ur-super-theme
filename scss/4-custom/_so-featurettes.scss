@@ -27,6 +27,12 @@
   h3 {
     @include wvu-lede();
   }
+  p {
+    margin-top: 0;
+  }
+  h2 + p {
+    margin-top: 1em;
+  }
 }
 
 .so-featurettes__postscript {
