@@ -9,6 +9,7 @@ custom_site_attributes:
   - masthead_color
   - twitter_handle
   - facebook_url
+  - instagram_url
   - linkedin_url
   - rss_url
   - youtube_url

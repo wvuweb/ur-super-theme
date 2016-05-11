@@ -2,62 +2,28 @@
   <div class="wvu-nav__social-media-icons-container">
 
     <r:if expr="{{ NOT(BLANK(facebook_url)) }}">
-      <a href="<r:site:data name="slot_02" />"><img src="https://patterns.wvu.edu/images/social-media-icons/facebook.svg" alt="Facebook icon" /></a>
+      <a href="<r:site:data name="facebook_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/facebook.svg" alt="Facebook icon" /></a>
     </r:if>
 
-    <r:edit_mode_only>
-      <r:editable_region name="fb-link" scope="site" type="simple">
-        Put Facebook URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="fb-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="fb-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/facebook.svg" alt="Facebook icon" /></a>
-    </r:page:if_has_content_for>
+    <r:if expr="{{ NOT(BLANK(instagram_url)) }}">
+      <a href="<r:site:data name="instagram_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/instagram.svg" alt="Instagram icon" /></a>
+    </r:if>
 
-    <r:edit_mode_only>
-      <r:editable_region name="ig-link" scope="site" type="simple">
-        Put Instagram URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="ig-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="ig-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/instagram.svg" alt="Instagram icon" /></a>
-    </r:page:if_has_content_for>
+    <r:if expr="{{ NOT(BLANK(linkedin_url)) }}">
+      <a href="<r:site:data name="linkedin_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/linkedin.svg" alt="LinkedIn icon" /></a>
+    </r:if>
 
-    <r:edit_mode_only>
-      <r:editable_region name="li-link" scope="site" type="simple">
-        Put LinkedIn URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="li-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="li-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/linkedin.svg" alt="LinkedIn icon" /></a>
-    </r:page:if_has_content_for>
+    <r:if expr="{{ NOT(BLANK(rss_url)) }}">
+      <a href="<r:site:data name="rss_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/rss.svg" alt="RSS icon" /></a>
+    </r:if>
 
-    <r:edit_mode_only>
-      <r:editable_region name="rs-link" scope="site" type="simple">
-        Put RSS URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="rs-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="rs-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/rss.svg" alt="RSS icon" /></a>
-    </r:page:if_has_content_for>
+    <r:if expr="{{ NOT(BLANK(twitter_url)) }}">
+      <a href="<r:site:data name="twitter_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/twitter.svg" alt="Twitter icon" /></a>
+    </r:if>
 
-    <r:edit_mode_only>
-      <r:editable_region name="tw-link" scope="site" type="simple">
-        Put Twitter URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="tw-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="tw-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/twitter.svg" alt="Twitter icon" /></a>
-    </r:page:if_has_content_for>
-
-    <r:edit_mode_only>
-      <r:editable_region name="ut-link" scope="site" type="simple">
-        Put YouTube URL here or delete me.
-      </r:editable_region>
-    </r:edit_mode_only>
-    <r:page:if_has_content_for region="ut-link" always_show_in_edit_mode="true">
-      <a href="<r:page:content name="ut-link" />"><img src="https://patterns.wvu.edu/images/social-media-icons/youtube.svg" alt="YouTube icon" /></a>
-    </r:page:if_has_content_for>
+    <r:if expr="{{ NOT(BLANK(youtube_url)) }}">
+      <a href="<r:site:data name="youtube_url" />"><img src="https://patterns.wvu.edu/images/social-media-icons/youtube.svg" alt="YouTube icon" /></a>
+    </r:if>
 
   </div>
 </div>
