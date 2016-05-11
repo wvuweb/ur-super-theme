@@ -5,6 +5,8 @@
   position: relative;
   a {
     color: $wvu-gold;
+    position: relative;
+    z-index: 3;
     &.button {
       color: white;
     }
