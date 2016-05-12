@@ -4,12 +4,12 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <r:comment><!-- meta charset gets set automatically by CleanSlate --></r:comment>
-    <title><r:page:first_non_blank_attr names="title, name" /> | <r:site_name /> | West Virginia University</title>
+    <title><r:page:first_non_blank_attr names="alternate_name, name" /> | <r:site_name /> | West Virginia University</title>
     <meta name="description" content="<r:page:meta_description />" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="<r:site:data name="google_site_verification" />" />
 
-    <meta property="og:title" content="<r:site_name /> | <r:page:first_non_blank_attr names="alternate_name,name" />" />
+    <meta property="og:title" content="<r:site_name /> | <r:page:first_non_blank_attr names="alternate_name, name" />" />
     <meta property="og:description" content="<r:page:meta_description />" />
     <r:set_var name="thumbnailurl">
       <r:page:slug />-thumbnail
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="<r:site_name />">
     <meta name="twitter:creator" content="<r:site:data name="twitter_handle" />">
-    <meta name="twitter:title" content="<r:page:first_non_blank_attr names="alternate_name,name" />">
+    <meta name="twitter:title" content="<r:page:first_non_blank_attr names="alternate_name, name" />">
     <meta name="twitter:description" content="<r:page:meta_description />">
 
     <r:include_stylesheet name="styles" />
@@ -49,7 +49,7 @@
     <r:comment><!-- What are layouts and <r:yield />? http://goo.gl/DFAsPv --></r:comment>
     <r:yield />
 
-    
+
 
     <div class="so-footer <r:page:content name="so-background-color--footer" /> background">
       <div class="so-footer__container">

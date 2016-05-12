@@ -5,7 +5,7 @@
 <div class="so-backpage-header" style="<r:files:each labels="backpage-background" limit="1" types="image" random="true">background-image: url(<r:file:image_url size="1780x580" />);</r:files:each> <r:files:each labels="{$bgurl}" limit="1" types="image" random="true">background-image: url(<r:file:image_url size="1780x580" />);</r:files:each>">
   <r:partial name="patterns/wvu-breadcrumbs" />
   <div class="so-backpage-header__container">
-    <h1><span><r:page:first_non_blank_attr names="alternate_name,name" /></span></h1>
+    <h1><span><r:page:first_non_blank_attr names="alternate_name, name" /></span></h1>
     <r:page:if_has_content_for region="wvu-profile__job-title">
       <p><r:page:content name="wvu-profile__job-title" /></p>
     </r:page:if_has_content_for>
