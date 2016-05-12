@@ -57,6 +57,7 @@
 .so-admin-hero__container {
   @include outer-container();
   @include u-wvu-container-padding();
+  padding: 7em 0 7.3em 0;
   @include so-vignetting();
 }
 
