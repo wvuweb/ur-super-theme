@@ -79,7 +79,7 @@ $pms-115-c: #FDDA24;
 }
 
 @mixin wvu-light-background($wvu-pattern-background-color, $wvu-pattern-text-color) {
-  $wvu-background-color-five-percent: tint($wvu-pattern-background-color, 2%);
+  $wvu-background-color-five-percent: shade($wvu-pattern-background-color, 2%);
   background-color: $wvu-pattern-background-color;
   color: $wvu-pattern-text-color;
   -webkit-font-smoothing: antialiased;
