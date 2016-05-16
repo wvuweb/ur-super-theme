@@ -16,24 +16,24 @@ layout: default
     <r:partial name="custom-patterns/so-page-meta" />
     <r:editable_region name="main" />
     <div class="so-calendar-widget">
-      <r:get_page id="18726">
-        <r:children:each>
-          <div class="so-calendar-widget__item">
-            <div class="so-calendar-widget__date">
-              <div class="so-calendar-widget__month">
-                <r:page:content name="event-month" />
-              </div>
-              <div class="so-calendar-widget__day">
-                <r:page:content name="event-day" />
-              </div>
+
+      <r:children:each>
+        <div class="so-calendar-widget__item">
+          <div class="so-calendar-widget__date">
+            <div class="so-calendar-widget__month">
+              <r:page:content name="event-month" />
             </div>
-            <div class="so-calendar-widget__details">
-              <a href="<r:page:url />"><strong><r:page:name /></strong><br>
-              <r:page:content name="event-subhead" /></a>
+            <div class="so-calendar-widget__day">
+              <r:page:content name="event-day" />
             </div>
           </div>
-        </r:children:each>
-      </r:get_page>
+          <div class="so-calendar-widget__details">
+            <a href="<r:page:url />"><strong><r:page:name /></strong><br>
+            <r:page:content name="event-subhead" /></a>
+          </div>
+        </div>
+      </r:children:each>
+
     </div>
   </main>
 
