@@ -83,7 +83,7 @@ $pms-115-c: #FDDA24;
   background-color: $wvu-pattern-background-color;
   color: $wvu-pattern-text-color;
   -webkit-font-smoothing: antialiased;
-  @include linear-gradient-background($wvu-pattern-background-color, $wvu-background-color-five-percent);
+  @include linear-gradient-background($wvu-background-color-five-percent, $wvu-pattern-background-color);
   h1, h2, h3, h4, h5, h6 {
     color: $wvu-pattern-text-color;
     a {
