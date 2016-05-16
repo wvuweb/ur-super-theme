@@ -111,6 +111,18 @@ $pms-115-c: #FDDA24;
   }
 }
 
+.u-white {
+  border-color: white;
+  color: white;
+  &.background {
+    @include wvu-light-background(white, $black);
+  }
+}
+
+@mixin wvu-white-background {
+  @include wvu-light-background(white, $black);
+}
+
 // Primary
 .u-wvu-blue {
   border-color: $wvu-blue;
