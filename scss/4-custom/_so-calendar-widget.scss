@@ -24,6 +24,9 @@
 
 .so-calendar-widget__postscript {
   @include so-postscript();
+  p {
+    max-width: 99999em;
+  }
 }
 
 .wvu-calendar {
