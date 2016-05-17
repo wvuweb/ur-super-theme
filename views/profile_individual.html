@@ -1,5 +1,10 @@
 ---
 layout: default
+custom_data_attributes:
+ - slot_04
+ - slot_05
+ - slot_06
+ - slot_07
 ---
 
 <r:set_var name="backpage_header" value="{$backpage_header}" default="true">
@@ -73,3 +78,5 @@ layout: default
   <r:partial name="custom-patterns/wvu-sidebar" />
 
 </div> <!-- /.wvu-container -->
+
+<r:partial name="custom-patterns/so-backpage-partials--bottom" />
