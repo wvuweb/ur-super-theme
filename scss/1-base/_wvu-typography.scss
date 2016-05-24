@@ -43,7 +43,7 @@ h1, .wvu-h1 { font-size: 3em; line-height: 1.08333333em; width: 100%; margin-top
 .wvu-shout--white { color: #fff; }
 
 @mixin wvu-shout {
-  line-height: $wvu-shout-line-height; font-family: $wvu-shout-fallback; text-transform: uppercase; font-weight: normal;
+  line-height: $wvu-shout-line-height; font-family: $wvu-shout; text-transform: uppercase; font-weight: normal;
   .fonts-loaded & { font-family: $wvu-shout; }
 }
 
