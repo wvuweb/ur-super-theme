@@ -2,15 +2,19 @@
 
   <aside class="wvu-sidebar">
 
-    <r:page:if_has_content_for region="wvu-sidebar" always_show_in_edit_mode="true">
+    <r:edit_mode_only>
       <r:editable_region name="wvu-sidebar">
         <h3>Sidebar</h3>
       </r:editable_region>
-      <r:edit_mode_only>
-        <div class="so-region-label">
-          Leave this if you want the sidebar to show up. The "Sidebar" label will not display.
-        </div>
-      </r:edit_mode_only>
+      <div class="so-region-label">
+        Leave this if you want the sidebar to show up. The "Sidebar" label will not display.
+      </div>
+    </r:edit_mode_only>
+
+    <r:page:if_has_content_for region="wvu-sidebar-content" always_show_in_edit_mode="true">
+      <r:editable_region name="wvu-sidebar-content">
+        Sidebar content.
+      </r:editable_region>
     </r:page:if_has_content_for>
 
     <r:page:if_has_content_for region="wvu-sub-nav__label" always_show_in_edit_mode="true">
