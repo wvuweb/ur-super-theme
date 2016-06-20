@@ -60,7 +60,6 @@
 .so-hero__container {
   @include outer-container();
   @include u-wvu-container-padding();
-  @include so-vignetting();
 }
 
 .so-hero--big--photo {
