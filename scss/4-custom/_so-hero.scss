@@ -1,5 +1,5 @@
 .so-hero {
-  background-color: $wvu-blue;
+  background-color: $pms-432-c;
   background-position: 50% 50%;
   background-size: cover;
   color: white;
@@ -64,7 +64,9 @@
 
 .so-hero--big--photo {
   .so-hero__container {
-    @include so-vignetting();
+    &:before {
+      @include so-vignetting();
+    }
   }
 }
 

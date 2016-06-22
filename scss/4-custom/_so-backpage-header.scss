@@ -1,5 +1,5 @@
 .so-backpage-header {
-  background-color: $wvu-blue;
+  background-color: $pms-432-c;;
   background-position: 50% 50%;
   background-size: cover;
   color: white;
@@ -39,6 +39,8 @@
 
 .so-backpage-header--big-photo {
   .so-backpage-header__container {
-    @include so-vignetting();
+    &:before {
+      @include so-vignetting();
+    }
   }
 }
