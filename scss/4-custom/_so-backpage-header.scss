@@ -39,8 +39,6 @@
 
 .so-backpage-header--big-photo {
   .so-backpage-header__container {
-    &:before {
-      @include so-vignetting();
-    }
+    @include so-vignetting();
   }
 }

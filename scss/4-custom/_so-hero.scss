@@ -64,9 +64,7 @@
 
 .so-hero--big--photo {
   .so-hero__container {
-    &:before {
-      @include so-vignetting();
-    }
+    @include so-vignetting();
   }
 }
 
