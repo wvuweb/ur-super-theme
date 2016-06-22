@@ -62,7 +62,7 @@
   @include u-wvu-container-padding();
 }
 
-.so-hero--big--photo {
+.so-hero--big-photo {
   .so-hero__container {
     @include so-vignetting();
   }
