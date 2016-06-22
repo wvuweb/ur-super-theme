@@ -1,5 +1,5 @@
 .so-admin-hero {
-  background-color: $wvu-blue;
+  background-color: $pms-432-c;
   color: white;
   overflow: hidden;
   position: relative;
@@ -61,7 +61,6 @@
   @include mq($bp-xlarge) {
     padding: 7em 0 7.3em 0;
   }
-  @include so-vignetting();
 }
 
 .so-admin-hero__copy {
