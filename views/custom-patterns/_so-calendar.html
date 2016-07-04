@@ -1,5 +1,3 @@
-
-
 <r:set_var name="so_calendar_feed">
   <r:site:data name="calendar_feed" />
 </r:set_var>
@@ -18,11 +16,14 @@
 
     <ul class="wvu-calendar wvu-calendar--flex">
 
-      <script language="javascript" src="<r:site:data name="calendar_feed" />"></script>
+      <r:if expr="{{ NOT(BLANK(calendar_fee_page)) }}">
+        <script language="javascript" src="<r:page:data name="calendar_feed_page" />"></script>
+      </r:if>
 
-      <r:comment>
-        <div id="adx041233" >Loading Events...</div>
-      </r:comment>
+      <r:if expr="{{ BLANK(calendar_fee_page) }}">
+        <script language="javascript" src="<r:site:data name="calendar_feed" />"></script>
+      </r:if>
+
     </ul>
 
     <div class="so-calendar-widget__postscript">
