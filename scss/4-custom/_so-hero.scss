@@ -135,4 +135,11 @@
       }
     }
   }
+  .so-hero--big-photo {
+    .so-hero__container {
+      &:before {
+        display: none;
+      }
+    }
+  }
 }

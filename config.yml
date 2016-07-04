@@ -16,6 +16,12 @@ custom_site_attributes:
   - youtube_url
   - twitter_widget_id
   - calendar_feed
+  - give_url
+  - apply_url
+  - visit_url
+  - request_info_url
+  - org_name
+  - org_url
   - jquery_defer
   - nav
   - default_content_01
