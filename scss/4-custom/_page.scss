@@ -48,3 +48,9 @@
     z-index: -1;
   }
 }
+
+.page--hide-instructions-false {
+  .so-instructions {
+    display: none;
+  }
+}
