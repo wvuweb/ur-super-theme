@@ -6,7 +6,9 @@ description: This is the WVU Brand Patterns theme built for CleanSlate. Original
 custom_site_attributes:
   # For Google Search Console
   - google_site_verification
+  - has_alternate_logo
   - masthead_color
+  - masthead_title
   - twitter_handle
   - facebook_url
   - instagram_url
