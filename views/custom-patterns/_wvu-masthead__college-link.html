@@ -1,12 +1,5 @@
-<r:page:if_has_content_for region="wvu-masthead__college-link" always_show_in_edit_mode="true">
+<r:if expr="{{ NOT(BLANK(masthead_college_link_address)) }}">
   <div class="wvu-masthead__college-link">
-    <a href="<r:page:content name="wvu-masthead-college-link-address" />" class="<r:edit_mode_only>edit-mode</r:edit_mode_only>"><r:page:content name="wvu-masthead__college-link" /></a>
-    <r:edit_mode_only>
-      <a><r:editable_region name="wvu-masthead__college-link" type="simple" scope="site">College Name</r:editable_region><br>
-        <r:editable_region name="wvu-masthead-college-link-address" scope="site">
-          URL for college
-        </r:editable_region>
-      </a>
-    </r:edit_mode_only>
+    <a href="<r:page:content name="masthead_college_link_address" />"><r:site:data name="masthead_college_title />"</a>
   </div>
-</r:page:if_has_content_for>
+</r:if>

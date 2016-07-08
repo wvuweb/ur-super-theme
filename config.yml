@@ -11,6 +11,8 @@ custom_site_attributes:
   - address_line_4
   - google_site_verification
   - has_alternate_logo
+  - masthead_college_link_address
+  - masthead_college_link_title
   - masthead_color
   - masthead_title
   - twitter_handle
