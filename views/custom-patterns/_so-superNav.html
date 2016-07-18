@@ -14,7 +14,7 @@
 <r:set_var name="soSuperNavItems" value="{$soSuperNavItems}" default="6" />
 <r:set_var name="scope" value="{$scope}" default="site" />
 
-<div class="so-super-nav <r:var name="so-super-nav__classes" /> <r:page:if_has_content_for region="so-super-nav__body--2">so-super-nav--diptych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--3">so-super-nav--triptych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body__description--4">so-super-nav--quadtych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--5">so-super-nav--quintych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--6">so-super-nav--sixtych</r:page:if_has_content_for> <r:edit_mode_only>so-super-nav--sixtych</r:edit_mode_only>">
+<div class="so-super-nav <r:page:content name="so-background-color-class--super-nav" /> background <r:var name="so-super-nav__classes" /> <r:page:if_has_content_for region="so-super-nav__body--2">so-super-nav--diptych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--3">so-super-nav--triptych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body__description--4">so-super-nav--quadtych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--5">so-super-nav--quintych</r:page:if_has_content_for> <r:page:if_has_content_for region="so-super-nav__body--6">so-super-nav--sixtych</r:page:if_has_content_for> <r:edit_mode_only>so-super-nav--sixtych</r:edit_mode_only>">
   <div class="so-super-nav__container">
 
     <r:page:if_has_content_for region="so-super-nav__header" always_show_in_edit_mode="true">
@@ -72,6 +72,7 @@
 
 <r:edit_mode_only>
   <div class="so-instructions">
-    <strong>Instructions for Super-Nav:</strong> This patterns has up to 7 columns for a super nav. Use unordered lists to list your links. Like the triptych, these panels are all optional. Note this will show up on every page.
+    <p><strong>Instructions for Super-Nav:</strong> This patterns has up to 7 columns for a super nav. Use unordered lists to list your links. Like the triptych, these panels are all optional. Note this will show up on every page.</p>
+    <p><strong>Background Color:</strong> <r:editable_region name="so-background-color-class--super-nav" /></p>
   </div>
 </r:edit_mode_only>
