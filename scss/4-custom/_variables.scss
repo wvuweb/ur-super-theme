@@ -12,8 +12,6 @@ $wvu-shout-font-size: 4.5em;
 $wvu-shout-margin: 0 0 .5em;
 $wvu-anytych-header-margin: 0 0 .5em;
 
-
-
 @mixin so-vignetting() {
   &:before {
     content: '';

@@ -27,6 +27,15 @@ editable_region:
   long-paragraph:
     "<%= Faker::Lorem.paragraph(7) %>"
 
+  so-hero__header:
+    "It Starts Now."
+
+  so-hero__action-item-text:
+    "More About This"
+
+  so-hero__text:
+    "So let&rsquo;s go. Release the Mountaineer spirit inside of you. Reach the limits of what you can do and then keep on going."
+
   wvu-hero-title-top:
     "It Starts"
 
@@ -213,6 +222,9 @@ site:
   name: "Brand Patterns"
   data:
     google_site_verification: "meta-tag-content-goes-here"
+    org_name: "Your Org Name Here"
+    masthead_title: "Your Site Title Here"
+    masthead_college_link_title: "Your College Title Here"
 
 page:
   id: 1
