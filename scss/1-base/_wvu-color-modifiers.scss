@@ -249,7 +249,7 @@ $pms-115-c: #FDDA24;
   border-color: $pms-629-c;
   color: $pms-629-c;
   &.background {
-    @include wvu-light-background($pms-629-c, $pms-629-c);
+    @include wvu-light-background($pms-629-c, $wvu-blue);
   }
 }
 
