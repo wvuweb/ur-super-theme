@@ -26,7 +26,7 @@
       <r:children>
         <div class="so-adverts__adverts so-averts__adverts--<r:count />">
           <r:each order="asc" labels="{$page_slug}" labels_match="any">
-            <div class="so-adverts__advertisement">
+            <div class="so-adverts__advertisement so-adverts__advertisement--<r:page:slug />">
               <div class="so-adverts__ad-text">
                 <a href="<r:page:content name="so-adverts__url" />"><span><r:page:first_non_blank_attr names="alternate_name,name" /></span></a>
               </div>
