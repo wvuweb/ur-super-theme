@@ -11,7 +11,7 @@
 
     <r:get_page id="{$featurettesProfilesAnywhere_id}">
 
-      <r:descendants order="asc" labels="{$page_slug}" labels_match="all">
+      <r:descendants order="asc" labels="{$page_slug}" labels_match="any">
         <div class="so-featurettes__featurettes so-featurettes__featurettes--<r:count />">
           <r:each>
             <div class="so-featurettes__featurette">
