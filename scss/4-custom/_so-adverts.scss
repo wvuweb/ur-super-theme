@@ -189,7 +189,15 @@ h2 + .so-adverts__adverts {
 }
 
 .main {
+  .so-adverts__ad-text {
+    @include mq($bp-xlarge) {
+      font-size: 1.2em;
+    }
+  }
   .so-adverts__container {
     width: 100%;
+  }
+  .so-adverts__header {
+    display: none;
   }
 }
