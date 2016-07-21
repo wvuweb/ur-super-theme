@@ -22,5 +22,15 @@
       </div> <!-- /.wvu-sub-nav -->
     </r:page:if_has_content_for>
 
+    <r:page:if_has_content_for region="wvu-sidebar-content-2" always_show_in_edit_mode="true">
+
+      <r:edit_mode_only>
+        <h3>More Sidebar Content:</h3>
+      </r:edit_mode_only>
+
+      <r:editable_region name="wvu-sidebar-content-2" />
+
+    </r:page:if_has_content_for>
+
   </aside>
 </r:if>
