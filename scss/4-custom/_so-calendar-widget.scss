@@ -1,8 +1,3 @@
-.so-calendar-widget {
-  @include pms-432-c-background();
-  background-color: shade($pms-432-c, 10%);
-}
-
 .so-calendar-widget__container {
   @include outer-container();
   @include u-wvu-container-padding();
@@ -74,5 +69,18 @@
 .so-calendar-widget__details {
   @include mq($bp-medium) {
     @include span-columns(10);
+  }
+}
+
+.wvu-sidebar, .so-featurettes__featurette, .so-magic-anytych__panel {
+  .wvu-calendar--flex { padding-left: 0;
+    li { padding-right: 1em; }
+    @include mq($bp-medium) {
+      display: block;
+      li {
+        width: 100%;
+        padding: 0 0 1em 0;
+      }
+    }
   }
 }
