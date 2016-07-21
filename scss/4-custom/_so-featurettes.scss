@@ -98,7 +98,6 @@
 }
 
 .so-featurettes--profiles {
-  @include pms-7476-c-background;
   img {
     border-radius: 50%;
   }
@@ -154,17 +153,19 @@
       }
       .so-featurettes__photo {
         @include mq($bp-medium) {
-          @include span-columns(5);
+          padding: 0;
+          @include span-columns(3);
         }
       }
       .so-featurettes__info {
         @include mq($bp-medium) {
+          font-size: .8em;
           @include span-columns(12);
         }
       }
       .so-featurettes__info--hasphoto {
         @include mq($bp-medium) {
-          @include span-columns(7);
+          @include span-columns(9);
         }
       }
     }
