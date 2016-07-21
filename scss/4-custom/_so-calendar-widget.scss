@@ -73,6 +73,12 @@
 }
 
 .wvu-sidebar, .so-featurettes__featurette, .so-magic-anytych__panel {
+  .so-calendar-widget__postscript {
+    display: none;
+  }
+  .wvu-calendar__container {
+    padding: 0;
+  }
   .wvu-calendar--flex { padding-left: 0;
     li { padding-right: 1em; }
     @include mq($bp-medium) {
