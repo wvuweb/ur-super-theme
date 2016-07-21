@@ -137,6 +137,7 @@
     }
     .so-featurettes__info {
       @include mq($bp-medium) {
+        font-size: .8em;
         @include span-columns(12);
       }
     }
@@ -147,7 +148,7 @@
     }
   }
   .so-featurettes--profiles {
-    .so-featurettes__featurette--1, .so-featurettes__featurette--2, .so-featurettes__featurette--3 {
+    .so-featurettes__featurettes--1, .so-featurettes__featurettes--2, .so-featurettes__featurettes--3 {
       .so-featurettes__featurette {
         @include mq($bp-medium) {
           @include span-columns(12);
