@@ -114,6 +114,9 @@
 }
 
 .wvu-sidebar, .so-featurettes__featurette, .so-magic-anytych__panel {
+  .so-featurettes__container {
+    padding: 0;
+  }
   .so-featurettes__featurette {
     @include mq($bp-medium) {
       @include span-columns(12);
