@@ -36,6 +36,12 @@
 .so-backpage-header__container {
   @include outer-container();
   @include so-vignetting();
+  padding-left: 1em;
+  padding-right: 1em;
+  @include mq($bp-xlarge) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .so-backpage-header--big-photo {
