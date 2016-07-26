@@ -219,10 +219,10 @@ ul.show-menu {
 .wvu-nav__apply-links {
   .button {
     font-size: .8em;
-		@include mq($bp-small) {
+		@include mq($bp-medium) {
 			font-size: .7em;
 		}
-		@include mq($bp-medium) {
+		@include mq($bp-xlarge) {
 			font-size: .8em;
 		}
   }
