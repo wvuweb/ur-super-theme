@@ -211,9 +211,6 @@ ul.show-menu {
 }
 
 .wvu-nav__nav {
-	@include mq($bp-small) {
-    @include span-columns(7.5);
-  }
 	@include mq($bp-medium) {
     @include span-columns(8.5);
   }
@@ -236,9 +233,6 @@ ul.show-menu {
   float: left;
   background-color: tint($black, 10%);
   padding: 0;
-	@include mq($bp-small) {
-    @include span-columns(4.5);
-  }
   @include mq($bp-medium) {
     padding: 0;
     float: right;
