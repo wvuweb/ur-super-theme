@@ -6,3 +6,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 1em;
   }
 }
+
+ul {
+  &.wvu-slashes {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      padding-left: 1em;
+      background: url(https://patterns.wvu.edu/images/diagonal-gold.svg) no-repeat 0 0px;
+      background-size: 20px;
+      margin-left: 0;
+    }
+  }
+}

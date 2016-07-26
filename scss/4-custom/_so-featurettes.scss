@@ -207,3 +207,16 @@
     }
   }
 }
+
+.main {
+  .so-featurettes--profiles {
+    .so-featurettes__featurettes--1, .so-featurettes__featurettes--2, .so-featurettes__featurettes--3 {
+      .so-featurettes__info {
+        @include mq($bp-small) {
+          font-size: 1em;
+          @include span-columns(12);
+        }
+      }
+    }
+  }
+}
