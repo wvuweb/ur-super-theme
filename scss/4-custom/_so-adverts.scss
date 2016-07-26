@@ -70,6 +70,15 @@ h2 + .so-adverts__adverts {
   }
 }
 
+.so-adverts__adverts--five {
+  .so-adverts__advertisement {
+    @include mq($bp-small) {
+      @include span-columns(2.4);
+      @include omega(5n);
+    }
+  }
+}
+
 .so-adverts__ad-text {
   position: absolute;
   font-size: 1.5em;
@@ -172,7 +181,7 @@ h2 + .so-adverts__adverts {
 }
 
 .wvu-sidebar {
-  .so-adverts__adverts, .so-adverts__adverts--two, .so-adverts__adverts--three, .so-adverts__adverts--four {
+  .so-adverts__adverts, .so-adverts__adverts--two, .so-adverts__adverts--three, .so-adverts__adverts--four, .so-adverts__adverts--five {
     .so-adverts__advertisement {
       margin-bottom: 1em;
       @include mq($bp-small) {
