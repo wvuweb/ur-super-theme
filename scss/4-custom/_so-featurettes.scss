@@ -117,6 +117,9 @@
   .so-featurettes__container {
     padding: 0;
   }
+  .so-featurettes__postscript, .so-featurettes__header {
+    display: none;
+  }
   .so-featurettes__featurette {
     @include mq($bp-medium) {
       margin-bottom: 1em;
