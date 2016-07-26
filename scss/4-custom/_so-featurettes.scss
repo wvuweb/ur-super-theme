@@ -57,6 +57,26 @@
   }
 }
 
+.so-featurettes-profiles {
+  .so-featurettes__featurettes--1 {
+    h3 {
+      @include mq($bp-medium) {
+        margin-top: 0;
+      }
+    }
+    .so-featurettes__photo {
+      @include mq($bp-medium) {
+        @include span-columns(3);
+      }
+    }
+    .so-featurettes__info--hasphoto {
+      @include mq($bp-medium) {
+        @include span-columns(9);
+      }
+    }
+  }
+}
+
 .so-featurettes__featurette {
   margin-bottom: 2em;
   @include mq($bp-medium) {
