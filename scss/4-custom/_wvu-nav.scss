@@ -216,18 +216,6 @@ ul.show-menu {
   }
 }
 
-.wvu-nav__apply-links {
-  .button {
-    font-size: .8em;
-		@include mq($bp-medium) {
-			font-size: .7em;
-		}
-		@include mq($bp-xlarge) {
-			font-size: .8em;
-		}
-  }
-}
-
 .wvu-nav__social-media-icons {
   width: 100%;
   float: left;
@@ -242,7 +230,7 @@ ul.show-menu {
   img {
     width: 28px;
 		margin: 14px 0;
-		@include mq($bp-medium) {
+		@include mq($bp-large) {
 			margin: 0;
 		}
   }
@@ -284,6 +272,15 @@ ul.show-menu {
   }
   @include mq($bp-xlarge) {
     padding-right: 0;
+  }
+	.button {
+    font-size: .8em;
+		@include mq($bp-large) {
+			font-size: .7em;
+		}
+		@include mq($bp-xlarge) {
+			font-size: .8em;
+		}
   }
 }
 
