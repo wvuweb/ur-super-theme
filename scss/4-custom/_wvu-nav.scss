@@ -6,7 +6,7 @@
 }
 
 .wvu-nav {
-  background: $wvu-black;
+  background: $black;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -212,7 +212,7 @@ ul.show-menu {
 
 .wvu-nav__nav {
   @include mq($bp-medium) {
-    @include span-columns(7.5);
+    @include span-columns(8.5);
   }
 }
 
@@ -231,7 +231,7 @@ ul.show-menu {
     padding: 0;
     float: right;
     background-color: transparent;
-    @include span-columns(4.5);
+    @include span-columns(3.5);
   }
   img {
     width: 28px;
@@ -242,7 +242,7 @@ ul.show-menu {
   }
 }
 
-.wvu-nav__social-media-icons-container, .wvu-nav__apply-links {
+.wvu-nav__social-media-icons-container {
   text-align: center;
   @include mq($bp-medium) {
     padding-top: 7px;
@@ -252,6 +252,22 @@ ul.show-menu {
   }
   @include mq($bp-large) {
     padding-top: 9px;
+  }
+  @include mq($bp-xlarge) {
+    padding-right: 0;
+  }
+}
+
+.wvu-nav__apply-links {
+  text-align: center;
+  @include mq($bp-medium) {
+    padding-top: 7px;
+    text-align: right;
+    float: right;
+    padding-right: 1em;
+  }
+  @include mq($bp-large) {
+    padding-top: 8px;
   }
   @include mq($bp-xlarge) {
     padding-right: 0;
