@@ -18,3 +18,10 @@
   padding-bottom: 0;
   padding-top: 0;
 }
+
+.wvu-masthead__org-link {
+  color: white;
+  &:visited {
+    color: white;
+  }
+}
