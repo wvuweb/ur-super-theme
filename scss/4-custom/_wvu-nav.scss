@@ -211,7 +211,7 @@ ul.show-menu {
 }
 
 .wvu-nav__nav {
-	@include mq($bp-medium) {
+	@include mq($bp-large) {
     @include span-columns(8.5);
   }
 }
@@ -228,12 +228,12 @@ ul.show-menu {
   }
 }
 
-.wvu-nav__social-media-icons, .wvu-nav__apply-links {
+.wvu-nav__social-media-icons {
   width: 100%;
   float: left;
   background-color: tint($black, 10%);
   padding: 0;
-  @include mq($bp-medium) {
+  @include mq($bp-large) {
     padding: 0;
     float: right;
     background-color: transparent;
@@ -250,14 +250,11 @@ ul.show-menu {
 
 .wvu-nav__social-media-icons-container {
   text-align: center;
-  @include mq($bp-medium) {
-    padding-top: 7px;
+  @include mq($bp-large) {
+    padding-top: 9px;
     text-align: left;
     float: right;
     padding-right: 1em;
-  }
-  @include mq($bp-large) {
-    padding-top: 9px;
   }
   @include mq($bp-xlarge) {
     padding-right: 0;
@@ -265,16 +262,25 @@ ul.show-menu {
 }
 
 .wvu-nav__apply-links {
+  width: 100%;
+  float: left;
+  background-color: tint($black, 10%);
+  padding: 0;
+}
+
+.wvu-nav__apply-links {
 	padding-top: 9px;
+	padding-bottom: 3px;
   text-align: center;
-  @include mq($bp-medium) {
-    padding-top: 7px;
+  @include mq($bp-large) {
     text-align: left;
     float: right;
     padding-right: 1em;
-  }
-  @include mq($bp-large) {
-    padding-top: 8px;
+    padding: 0;
+		padding-top: 8px;
+    float: right;
+    background-color: transparent;
+    @include span-columns(3.5);
   }
   @include mq($bp-xlarge) {
     padding-right: 0;
