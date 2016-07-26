@@ -216,7 +216,13 @@ ul.show-menu {
   }
 }
 
-.wvu-nav__social-media-icons {
+.wvu-nav__apply-links {
+  .button {
+    font-size: .8em;
+  }
+}
+
+.wvu-nav__social-media-icons, .wvu-nav__apply-links {
   width: 100%;
   float: left;
   background-color: tint($black, 10%);
@@ -236,7 +242,7 @@ ul.show-menu {
   }
 }
 
-.wvu-nav__social-media-icons-container {
+.wvu-nav__social-media-icons-container, .wvu-nav__apply-links {
   text-align: center;
   @include mq($bp-medium) {
     padding-top: 7px;
