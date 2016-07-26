@@ -1,5 +1,6 @@
 .wvu-masthead__college-link {
   a {
+    text-decoration: none;
     &.edit-mode {
       display: none;
     }
@@ -21,7 +22,8 @@
 
 .wvu-masthead__org-link {
   color: white;
-  &:visited {
+  font-weight: bold;
+  &:visited, &:hover {
     color: white;
   }
 }
