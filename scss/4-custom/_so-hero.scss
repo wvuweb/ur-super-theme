@@ -143,3 +143,15 @@
     }
   }
 }
+
+.so-hero--right {
+  .so-hero__container {
+    &:before {
+      background: radial-gradient(farthest-side at 30% 55%, transparent, #000 131%);
+    }
+  }
+  .so-hero__copy {
+    float: right;
+    width: auto;
+  }
+}
