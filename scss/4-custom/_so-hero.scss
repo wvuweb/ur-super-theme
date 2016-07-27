@@ -1,6 +1,7 @@
 .so-hero {
   background-color: $pms-432-c;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-size: cover;
   color: white;
   overflow: hidden;
@@ -8,6 +9,10 @@
   position: relative;
   @include mq($bp-xlarge) {
     padding: 0;
+  }
+  @include mq($bp-jumbo) {
+    background-color: #000;
+    background-size: contain;
   }
   a {
     color: white;
