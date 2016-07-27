@@ -10,10 +10,6 @@
   @include mq($bp-xlarge) {
     padding: 0;
   }
-  @include mq($bp-jumbo) {
-    background-color: #000;
-    background-size: contain;
-  }
   a {
     color: white;
     position: relative;
