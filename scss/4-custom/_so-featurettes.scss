@@ -214,7 +214,6 @@
       .so-featurettes__info {
         @include mq($bp-small) {
           font-size: 1em;
-          @include span-columns(12);
         }
       }
     }
