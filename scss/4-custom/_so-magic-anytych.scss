@@ -155,6 +155,34 @@
   }
 }
 
+.so-magic-anytych--quintych {
+  h3 {
+    font-size: 1.5em;
+  }
+  .so-magic-anytych__panel {
+    @include mq($bp-medium) {
+      @include span-columns(2.4);
+    }
+  }
+  .so-magic-anytych__photo {
+    font-size: 5em;
+    @include mq($bp-medium) {
+      @include span-columns(12);
+    }
+  }
+  .so-magic-anytych__copy {
+    @include mq($bp-medium) {
+      @include span-columns(12);
+    }
+  }
+  .so-magic-anytych__copy--wide {
+    text-align: left;
+    p {
+      margin: 1em 0;
+    }
+  }
+}
+
 .u-wvu-blue.background {
   .so-magic-anytych {
     .so-magic-anytych__photo {
