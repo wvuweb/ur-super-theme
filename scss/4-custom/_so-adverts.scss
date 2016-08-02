@@ -45,16 +45,16 @@ h2 + .so-adverts__adverts {
 
 .so-adverts__adverts--2 {
   .so-adverts__advertisement {
-    @include mq($bp-small) {
+    @include mq($bp-medium) {
       @include span-columns(6);
       @include omega(2n)
     }
   }
 }
 
-.so-adverts__adverts--3 {
+.so-adverts__adverts--3, .so-adverts__adverts--6 {
   .so-adverts__advertisement {
-    @include mq($bp-small) {
+    @include mq($bp-medium) {
       @include span-columns(4);
       @include omega-reset(4n);
       @include omega(3n)
@@ -64,7 +64,7 @@ h2 + .so-adverts__adverts {
 
 .so-adverts__adverts--4 {
   .so-adverts__advertisement {
-    @include mq($bp-small) {
+    @include mq($bp-medium) {
       @include span-columns(3);
       @include omega-reset(4n);
       @include omega(4n);
@@ -72,16 +72,16 @@ h2 + .so-adverts__adverts {
   }
 }
 
-.so-adverts__adverts--5 {
+.so-adverts__adverts--5, .so-adverts__adverts--9, .so-adverts__adverts--10 {
   .so-adverts__advertisement {
-    @include mq($bp-small) {
+    @include mq($bp-medium) {
       @include span-columns(2.4);
       @include omega-reset(4n);
       @include omega(5n);
     }
   }
   .so-adverts__ad-text {
-    @include mq($bp-small) {
+    @include mq($bp-medium) {
       font-size: 1.2em;
     }
   }
