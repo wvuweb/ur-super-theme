@@ -43,7 +43,7 @@ h2 + .so-adverts__adverts {
   margin-top: 3em;
 }
 
-.so-adverts__adverts--two {
+.so-adverts__adverts--2 {
   .so-adverts__advertisement {
     @include mq($bp-small) {
       @include span-columns(6);
@@ -52,7 +52,7 @@ h2 + .so-adverts__adverts {
   }
 }
 
-.so-adverts__adverts--three {
+.so-adverts__adverts--3 {
   .so-adverts__advertisement {
     @include mq($bp-small) {
       @include span-columns(4);
@@ -61,7 +61,7 @@ h2 + .so-adverts__adverts {
   }
 }
 
-.so-adverts__adverts--four {
+.so-adverts__adverts--4 {
   .so-adverts__advertisement {
     @include mq($bp-small) {
       @include span-columns(3);
@@ -70,7 +70,7 @@ h2 + .so-adverts__adverts {
   }
 }
 
-.so-adverts__adverts--five {
+.so-adverts__adverts--5 {
   .so-adverts__advertisement {
     @include mq($bp-small) {
       @include span-columns(2.4);
