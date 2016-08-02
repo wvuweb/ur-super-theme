@@ -35,6 +35,11 @@ custom_data_attributes:
             <p class="wvu-profile__phone-icon"><a class="wvu-profile__phone" href="tel:<r:page:content name="wvu-profile__phone" />"><r:page:content name="wvu-profile__phone" /></a></p>
             <p class="wvu-profile__email"><r:page:content name="wvu-profile__email" /></p>
             <p class="wvu-profile__short-description"><r:page:content name="wvu-profile__short-description" /></p>
+            <r:page:if_has_content_for region="wvu-profile__quote">
+              <blockquote>
+                <r:page:content name="wvu-profile__quote" />
+              </blockquote>
+            </r:page:if_has_content_for>
             <r:page:if_has_content_for region="wvu-profile__button-text">
               <p class="wvu-profile__button"><a class="button" href="<r:page:url />"><r:page:content name="wvu-profile__button-text" /></a></p>
             </r:page:if_has_content_for>
