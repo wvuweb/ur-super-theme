@@ -16,6 +16,7 @@ custom_site_attributes:
   - apply_link_2_url
   - apply_link_3
   - apply_link_3_url
+  - disable_masthead_search
   - google_site_verification
   - has_alternate_logo
   - masthead_college_link_address
