@@ -46,3 +46,10 @@
   </r:set_var>
   <r:partial name="{$patternName7}" />
 </r:if>
+
+<r:if expr="{{ NOT(BLANK(slot_08)) }}">
+  <r:set_var name="patternName8">
+    custom-patterns/so-<r:page:data name="slot_08" />
+  </r:set_var>
+  <r:partial name="{$patternName8}" />
+</r:if>
