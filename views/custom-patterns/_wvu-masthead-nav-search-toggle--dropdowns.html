@@ -14,15 +14,35 @@
   </r:set_var>
 </r:if>
 
-<div class="wvu-masthead <r:var name="wvu-masthead__classes" /> <r:files:each labels="masthead-logo" limit="1" types="image" random="true">wvu-masthead--blue</r:files:each>">
+<div class="wvu-masthead <r:var name="wvu-masthead__classes" /> wvu-masthead--disable-search--<r:page:data name="disable_masthead_search" /> <r:files:each labels="masthead-logo" limit="1" types="image" random="true">wvu-masthead--blue</r:files:each>">
   <div class="wvu-masthead__container">
     <r:partial name="custom-patterns/wvu-masthead__logo" />
 
-    <r:partial name="custom-patterns/wvu-masthead__college-link" />
+    <r:if value1="{$disable_masthead_search}" value2="true" op="!=">
 
-    <div class="wvu-masthead__search-slider">
-      <r:partial name="patterns/wvu-masthead__search-bar" />
-    </div>
+      <r:partial name="custom-patterns/wvu-masthead__college-link" />
+
+      <div class="wvu-masthead__search-slider">
+        <r:partial name="patterns/wvu-masthead__search-bar" />
+      </div>
+
+    </r:if>
+
+    <r:if value1="{$disable_masthead_search}" value2="true" op="=">
+
+      <div class="wvu-masthead__apply-links">
+        <r:if expr="{{ NOT(BLANK(apply_link_1)) }}">
+          <a href="<r:site:data name="apply_link_1_url" />" class="button button--wvu-gold"><r:site:data name="apply_link_1" /></a>
+        </r:if>
+        <r:if expr="{{ NOT(BLANK(apply_link_2)) }}">
+          <a href="<r:site:data name="apply_link_2_url" />" class="button button--pms-629-c"><r:site:data name="apply_link_2" /></a>
+        </r:if>
+        <r:if expr="{{ NOT(BLANK(apply_link_3)) }}">
+          <a href="<r:site:data name="apply_link_3_url" />" class="button button--pms-144-c"><r:site:data name="apply_link_3" /></a>
+        </r:if>
+      </div>
+
+    </r:if>
 
   </div> <!-- /.wvu-masthead-container -->
 </div> <!-- /.wvu-masthead -->
@@ -41,7 +61,9 @@
     </r:if>
 
     <r:if value1="{$show_apply_links}" value2="true" operator="=">
-      <r:partial name="custom-patterns/wvu-nav__apply-links" />
+      <r:if value1="{$disable_masthead_search}" value2="true" op="!=">
+        <r:partial name="custom-patterns/wvu-nav__apply-links" />
+      </r:if>
     </r:if>
 
   </div>
