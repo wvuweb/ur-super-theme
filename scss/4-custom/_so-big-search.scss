@@ -91,9 +91,12 @@
 }
 
 .so-big-search__postscript {
-  display: block;
+  clear: both;
+  display: table;
   margin: 0 auto;
+  width: 100%;
   p {
     margin: 1em 0;
+    max-width: 9999em;
   }
 }
