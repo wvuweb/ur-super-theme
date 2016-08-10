@@ -1,0 +1,221 @@
+.so-media {
+  h2 {
+    font-size: $wvu-shout-font-size;
+    margin: $wvu-shout-margin;
+    text-align: center;
+  }
+  h3 {
+    margin-top: 0;
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
+
+.so-media__container {
+  @include outer-container();
+  @include u-wvu-container-padding();
+}
+
+.so-media__header {
+  font-size: 2.5em;
+  @include wvu-lede();
+  h2 {
+    @include wvu-primary-pattern-heading();
+  }
+  h3 {
+    @include wvu-lede();
+    font-size: 1em;
+  }
+  p {
+    margin-top: 0;
+  }
+  h2 + p {
+    margin-top: 1em;
+  }
+}
+
+.so-media__postscript {
+  @include so-postscript();
+}
+
+.so-media__media--1, .so-media__media--2 {
+  h3 {
+    @include mq($bp-medium) {
+      margin-top: 0;
+    }
+  }
+  .so-media__photo {
+    @include mq($bp-medium) {
+      @include span-columns(6);
+    }
+  }
+  .so-media__info--hasphoto {
+    @include mq($bp-medium) {
+      @include span-columns(6);
+    }
+  }
+}
+
+.so-media--profiles {
+  .so-media__media--1 {
+    h3 {
+      @include mq($bp-medium) {
+        margin-top: 0;
+      }
+    }
+    .so-media__photo {
+      @include mq($bp-medium) {
+        @include span-columns(3);
+      }
+    }
+    .so-media__info--hasphoto {
+      @include mq($bp-medium) {
+        @include span-columns(9);
+      }
+    }
+  }
+}
+
+.so-media__media {
+  margin-bottom: 2em;
+  @include mq($bp-medium) {
+    @include span-columns(3);
+    @include omega(4n);
+    margin-bottom: 0;
+  }
+}
+
+.so-media__media--1 {
+  .so-media__media {
+    @include mq($bp-medium) {
+      @include span-columns(12);
+      @include omega-reset(4n);
+    }
+  }
+}
+
+.so-media__media--2 {
+  .so-media__media {
+    @include mq($bp-medium) {
+      @include span-columns(6);
+      @include omega-reset(4n);
+    }
+  }
+}
+
+.so-media__media--3 {
+  .so-media__media {
+    @include mq($bp-medium) {
+      @include span-columns(4);
+      @include omega-reset(4n);
+    }
+  }
+}
+
+.so-media__photo {
+  margin-bottom: 1em;
+}
+
+.so-media--profiles {
+  img {
+    border-radius: 50%;
+  }
+  .so-media__photo {
+    padding: 0 2em;
+    text-align: center;
+  }
+}
+
+.main, .wvu-sidebar {
+  .so-media__container {
+    width: 100%;
+  }
+}
+
+.wvu-sidebar, .so-media__media, .so-magic-anytych__panel, .main {
+  .so-media__container {
+    padding: 1em 0;
+  }
+  .so-media__postscript, .so-media__header {
+    display: none;
+  }
+  .so-media__media {
+    @include mq($bp-medium) {
+      margin-bottom: 1em;
+      @include span-columns(12);
+      @include omega-reset(4n);
+    }
+  }
+  .so-media__media--1, .so-media__media--2, .so-media__media--3 {
+    .so-media__featurette {
+      @include mq($bp-medium) {
+        @include span-columns(12);
+        @include omega-reset(4n);
+      }
+    }
+    .so-media__photo {
+      @include mq($bp-medium) {
+        @include span-columns(12);
+      }
+    }
+    .so-media__info {
+      @include mq($bp-medium) {
+        font-size: .8em;
+        @include span-columns(12);
+      }
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+    .so-media__info--hasphoto {
+      @include mq($bp-medium) {
+        @include span-columns(12);
+      }
+    }
+  }
+  .so-media--profiles {
+    .so-media__media--1, .so-media__media--2, .so-media__media--3 {
+      .so-media__media {
+        @include mq($bp-small) {
+          margin-bottom: 1em;
+          @include span-columns(12);
+          @include omega-reset(4n);
+        }
+      }
+      .so-media__photo {
+        @include mq($bp-small) {
+          padding: 0;
+          @include span-columns(3);
+        }
+      }
+      .so-media__info {
+        @include mq($bp-small) {
+          font-size: .8em;
+          @include span-columns(12);
+        }
+        h3 {
+          margin-bottom: 0;
+        }
+      }
+      .so-media__info--hasphoto {
+        @include mq($bp-small) {
+          @include span-columns(9);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  .so-media--profiles {
+    .so-media__media--1, .so-media__media--2, .so-media__media--3 {
+      .so-media__info {
+        @include mq($bp-small) {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}

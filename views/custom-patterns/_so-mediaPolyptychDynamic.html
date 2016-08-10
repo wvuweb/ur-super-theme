@@ -1,0 +1,56 @@
+<div class="so-media so-media--1 <r:page:content name="so-background-color-class--media" /> background">
+  <div class="so-media__container">
+
+    <r:page:if_has_content_for region="so-media__header" always_show_in_edit_mode="true">
+      <div class="so-media__header">
+        <r:editable_region name="so-media__header">
+          <h2>media Headline</h2>
+          <p>Subhead goes here.</p>
+        </r:editable_region>
+      </div>
+    </r:page:if_has_content_for>
+
+    <r:set_var name="media_id">
+      <r:page:data name="media_id" />
+    </r:set_var>
+
+    <r:get_page id="{$media_id}">
+
+      <r:children by="name" order="asc" labels="feature" labels_match="any">
+        <div class="so-media__media so-media__media--<r:count />">
+          <r:each>
+            <div class="so-media__featurette">
+              <r:set_var name="somediaInfoWide" default="nophoto" />
+              <r:if expr="{{ NOT(BLANK(thumbnail_url)) }}">
+                <div class="so-media__photo">
+                  <a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:page:data name="thumbnail_url"></a>
+                </div>
+                <r:set_var name="somediaInfoWide">
+                  hasphoto
+                </r:set_var>
+              </r:if>
+              <div class="so-media__info so-media__info--<r:var name="somediaInfoWide" />">
+                <h3><a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h3>
+                <p>
+                  <r:page:data name="meta_description" />
+                </p>
+                <p>
+                  <a class="button" href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:if expr="{{ BLANK(media_link_text) }}">More About <r:page:first_non_blank_attr names="alternate_name,name" /></r:if><r:if expr="{{ NOT(BLANK(media_link_text)) }}"><r:page:data name="media_link_text" /></r:if></a>
+                </p>
+              </div>
+            </div>
+          </r:each>
+        </div>
+      </r:children>
+
+    </r:get_page>
+
+  </div>
+</div>
+
+<r:edit_mode_only>
+  <div class="so-instructions">
+    <strong>Instructions for media:</strong> This loops through the children of page and pulls content to create sub-features. Enter the parent page&rsquo;s ID in the <strong>media_id</strong> field in the site properties. Each page you wish featured must be labelled "feature".
+    <p><strong>Background Color:</strong> <r:editable_region name="so-background-color-class--media" /></p>
+  </div>
+</r:edit_mode_only>
