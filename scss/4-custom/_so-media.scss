@@ -149,7 +149,7 @@
     }
   }
   .so-media__media--1, .so-media__media--2, .so-media__media--3 {
-    .so-media__featurette {
+    .so-media__media {
       @include mq($bp-medium) {
         @include span-columns(12);
         @include omega-reset(4n);
