@@ -88,7 +88,7 @@
 }
 
 .so-media__media--1 {
-  .so-media__media {
+  .so-media__media-block {
     @include mq($bp-medium) {
       @include span-columns(12);
       @include omega-reset(4n);
@@ -97,7 +97,7 @@
 }
 
 .so-media__media--2 {
-  .so-media__media {
+  .so-media__media-block {
     @include mq($bp-medium) {
       @include span-columns(6);
       @include omega-reset(4n);
@@ -106,7 +106,7 @@
 }
 
 .so-media__media--3 {
-  .so-media__media {
+  .so-media__media-block {
     @include mq($bp-medium) {
       @include span-columns(4);
       @include omega-reset(4n);
@@ -141,7 +141,7 @@
   .so-media__postscript, .so-media__header {
     display: none;
   }
-  .so-media__media {
+  .so-media__media-block {
     @include mq($bp-medium) {
       margin-bottom: 1em;
       @include span-columns(12);
@@ -149,7 +149,7 @@
     }
   }
   .so-media__media--1, .so-media__media--2, .so-media__media--3 {
-    .so-media__media {
+    .so-media__media-block {
       @include mq($bp-medium) {
         @include span-columns(12);
         @include omega-reset(4n);
@@ -177,7 +177,7 @@
   }
   .so-media--profiles {
     .so-media__media--1, .so-media__media--2, .so-media__media--3 {
-      .so-media__media {
+      .so-media__media-block {
         @include mq($bp-small) {
           margin-bottom: 1em;
           @include span-columns(12);

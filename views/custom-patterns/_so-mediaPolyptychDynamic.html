@@ -19,7 +19,7 @@
       <r:children by="name" order="asc" labels="feature" labels_match="any">
         <div class="so-media__media so-media__media--<r:count />">
           <r:each>
-            <div class="so-media__media">
+            <div class="so-media__media-block">
               <r:set_var name="somediaInfoWide" default="nophoto" />
               <r:if expr="{{ NOT(BLANK(thumbnail_url)) }}">
                 <div class="so-media__photo">
