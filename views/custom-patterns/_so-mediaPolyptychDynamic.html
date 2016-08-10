@@ -23,19 +23,19 @@
               <r:set_var name="somediaInfoWide" default="nophoto" />
               <r:if expr="{{ NOT(BLANK(thumbnail_url)) }}">
                 <div class="so-media__photo">
-                  <a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:page:data name="thumbnail_url"></a>
+                  <a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url" /></r:if>"><r:page:data name="thumbnail_url" /></a>
                 </div>
                 <r:set_var name="somediaInfoWide">
                   hasphoto
                 </r:set_var>
               </r:if>
               <div class="so-media__info so-media__info--<r:var name="somediaInfoWide" />">
-                <h3><a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h3>
+                <h3><a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url" /></r:if>"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h3>
                 <p>
                   <r:page:data name="meta_description" />
                 </p>
                 <p>
-                  <a class="button" href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url"></r:if>"><r:if expr="{{ BLANK(media_link_text) }}">More About <r:page:first_non_blank_attr names="alternate_name,name" /></r:if><r:if expr="{{ NOT(BLANK(media_link_text)) }}"><r:page:data name="media_link_text" /></r:if></a>
+                  <a class="button" href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url" /></r:if>"><r:if expr="{{ BLANK(media_link_text) }}">More About <r:page:first_non_blank_attr names="alternate_name,name" /></r:if><r:if expr="{{ NOT(BLANK(media_link_text)) }}"><r:page:data name="media_link_text" /></r:if></a>
                 </p>
               </div>
             </div>
