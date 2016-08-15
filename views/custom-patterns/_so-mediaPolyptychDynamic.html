@@ -23,7 +23,7 @@
               <r:set_var name="somediaInfoWide" default="nophoto" />
               <r:if expr="{{ NOT(BLANK(thumbnail_url)) }}">
                 <div class="so-media__photo">
-                  <a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url" /></r:if>"><img src="<r:page:data name="thumbnail_url" alt="thumbnail_alt" />"></a>
+                  <a href="<r:if expr="{{ BLANK(alternate_url) }}"><r:page:url /></r:if><r:if expr="{{ NOT(BLANK(alternate_url)) }}"><r:page:data name="alternate_url" /></r:if>"><img src="<r:page:data name="thumbnail_url" />" alt="<r:page:data name="thumbnail_alt" />"></a>
                 </div>
                 <r:set_var name="somediaInfoWide">
                   hasphoto
