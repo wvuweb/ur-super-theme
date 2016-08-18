@@ -13,9 +13,10 @@
   "author": "May Day <may.day@mail.wvu.edu>",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "critical": "^0.7.3",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.1.1"
+    "gulp-sass": "^2.3.2"
   },
   "dependencies": {
     "critical": "^0.7.2"

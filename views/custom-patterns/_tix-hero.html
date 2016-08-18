@@ -1,0 +1,14 @@
+
+
+<r:set_var name="bgurl">
+  <r:page:slug />-hero-background
+</r:set_var>
+
+<div class="tix-hero <r:if value1="{$hero_text_alignment}" value2="right" operator="=">tix-hero--right</r:if> <r:page:unless_has_content_for region="tixso-hero__photo">tix-hero--big-photo</r:page:unless_has_content_for>" style="background-image: url(<r:files:each labels="{$bgurl}" limit="1" types="image" random="true"><r:file:image_url size="1780x580" /></r:files:each>); <r:page:if_has_content_for region="tix-hero__photo">background-image: none;</r:page:if_has_content_for>">
+  <div class="tix-hero__container">
+    <div class="tix-hero__copy <r:edit_mode_only>tix-hero__copy--edit-mode</r:edit_mode_only>">
+      <h1><span>Sexual Assult<br>and Power Based<br>Personal Violence<br>Prevention</span></h1>
+      <a href="#" class="button button--white button--big">It starts with you.</a>
+    </div>
+  </div>
+</div>

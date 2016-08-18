@@ -1,0 +1,37 @@
+.tix-its-on-us {
+    @include span-columns(12);
+    @include black-background;
+}
+
+.tix-its-on-us__container {
+  @include outer-container();
+  @include u-wvu-container-padding();
+}
+
+.tix-its-on-us__item__logo {
+    @include span-columns(12);
+    margin-bottom: 2em;
+    img { width: 350px; }
+    @include mq($bp-medium) {
+        @include span-columns(4);
+        margin-bottom: 0em;
+    }
+}
+
+.tix-its-on-us__item__copy {
+    @include span-columns(12);
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 2em;
+        margin-top: 0;
+        li {
+            margin: 1em 0;
+            font-size: 1.5em;
+            &:first-child { margin-top: 0; }
+        }
+    }
+    @include mq($bp-medium) {
+        @include span-columns(8);
+    }
+}

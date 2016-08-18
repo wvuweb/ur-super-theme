@@ -1,7 +1,7 @@
-.so-footer {
+.tix-footer {
   @include span-columns(12);
 }
-.so-footer__container {
+.tix-footer__container {
   @include outer-container();
   @include u-wvu-container-padding();
 }

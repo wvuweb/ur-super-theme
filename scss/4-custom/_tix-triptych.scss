@@ -1,0 +1,15 @@
+.tix-triptych {
+    @include span-columns(12);
+}
+
+.tix-triptych__container {
+  @include outer-container();
+  @include u-wvu-container-padding();
+}
+
+.tix-triptych__item {
+    @include span-columns(12);
+    @include mq($bp-medium) {
+        @include span-columns(4);
+    }
+}

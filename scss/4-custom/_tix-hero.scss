@@ -1,0 +1,106 @@
+.tix-hero {
+  background-color: $pms-432-c;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  padding: 0 2em;
+  position: relative;
+  @include mq($bp-xlarge) {
+    padding: 0;
+  }
+  a {
+    color: white;
+    position: relative;
+    z-index: 3;
+  }
+  h1 {
+    font-size: $wvu-shout-font-size;
+    line-height: $header-line-height;
+    margin-bottom: .5em;
+    margin-top: 1em;
+    max-width: 12em;
+    position: relative;
+    @include wvu-shout();
+    text-transform: uppercase;
+    @include so-gold-slash();
+    &:before {
+      background-size: 292px;
+      left: -173px;
+      top: -83px;
+    }
+    span {
+      position: relative;
+      z-index: 3;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+  }
+  img {
+    border: 1px solid $black;
+    position: relative;
+    z-index: 3;
+  }
+  p {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.tix-hero__copy {
+  margin-bottom: 2em;
+  @include mq($bp-medium) {
+    margin-bottom: 0;
+  }
+}
+
+.tix-hero__container {
+  @include outer-container();
+  @include u-wvu-container-padding();
+}
+
+.tix-hero--big-photo {
+  .tix-hero__container {
+    @include so-vignetting();
+  }
+}
+
+.tix-hero__copy, .tix-hero__photo {
+  @include mq($bp-medium) {
+    @include span-columns(10);
+  }
+}
+
+
+.page--edit-mode {
+  .tix-hero {
+    h1 {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .tix-hero--big-photo {
+    .tix-hero__container {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+.tix-hero--right {
+  .tix-hero__container {
+    &:before {
+      background: radial-gradient(farthest-side at 30% 55%, transparent, #000 131%);
+    }
+  }
+  .tix-hero__copy {
+    float: right;
+    width: auto;
+  }
+}
