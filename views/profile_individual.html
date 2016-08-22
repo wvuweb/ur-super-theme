@@ -1,10 +1,46 @@
 ---
 layout: default
+custom_data_attributes:
+  - advertisements_id
+  - alternate_url
+  - backpage_has_sidebar
+  - backpage_header
+  - backpage_header_badge
+  - calendar_feed_page
+  - agenda_id
+  - calendar_id
+  - directory_id
+  - featurettes_id
+  - featurettes_2_id
+  - hero
+  - hero_text_alignment
+  - polyptych_panel_count
+  - profiles_id
+  - search_action
+  - show_instructions
+  - staff_directory_id
+  - testimonials_id
+  - slot_01
+  - slot_02
+  - slot_03
+  - slot_04
+  - slot_05
+  - slot_06
+  - slot_07
+  - media_id
+  - media_id_2
+  - media_link_text
+  - thumbnail_alt
+  - thumbnail_url
 ---
+
+<r:partial name="custom-patterns/so-backpage-partials--top" />
 
 <div class="wvu-container">
 
   <main id="maincontent" class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+    <r:partial name="custom-patterns/so-page-meta" />
 
     <div class="wvu-profile__contact-and-photo">
       <div class="wvu-profile__photo">
@@ -67,3 +103,5 @@ layout: default
   <r:partial name="custom-patterns/wvu-sidebar" />
 
 </div> <!-- /.wvu-container -->
+
+<r:partial name="custom-patterns/so-backpage-partials--bottom" />

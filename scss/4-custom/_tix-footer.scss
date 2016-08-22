@@ -1,7 +1,0 @@
-.tix-footer {
-  @include span-columns(12);
-}
-.tix-footer__container {
-  @include outer-container();
-  @include u-wvu-container-padding();
-}

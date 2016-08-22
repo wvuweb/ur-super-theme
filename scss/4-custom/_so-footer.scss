@@ -1,6 +1,3 @@
-.so-footer {
-  @include span-columns(12);
-}
 .so-footer__container {
   @include outer-container();
   @include u-wvu-container-padding();

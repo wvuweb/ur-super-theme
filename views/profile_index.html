@@ -1,5 +1,8 @@
 ---
 layout: default
+custom_data_attributes:
+ - backpage_header_badge
+ - thumbnail_url
 ---
 
 <r:set_var name="backpage_header" value="{$backpage_header}" default="true">
@@ -13,6 +16,8 @@ layout: default
 <div class="wvu-container">
 
   <main id="maincontent" class="main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+
+    <r:partial name="custom-patterns/so-page-meta" />
 
     <r:edit_mode_only>
       <p><strong>Main body text:</strong></p>
