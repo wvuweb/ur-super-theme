@@ -1,7 +1,17 @@
+<r:set_var name="cal_javascript_url">
+  <r:site:data name="calendar_url" />
+</r:set_var>
+
+<r:if expr="{{ NOT(BLANK(page_calendar_url)) }}">
+  <r:set_var name="cal_javascript_url">
+    <r:page:data name="page_calendar_url" />
+  </r:set_var>
+</r:if>
+
 <script type="text/javascript" src="https://calendar.wvu.edu/Scripts/core.js"></script>
 <script type="text/javascript">
   ActiveData.Events(
-      "https://calendar.wvu.edu/handlers/query.ashx?id=97c857fee08a4e54978cda2e18491d2e&tenant=&site=academic",
+      "<r:var name="cal_javascript_url" />",
       function (response) {$("#cal").append(response.data);}
   );
 </script>

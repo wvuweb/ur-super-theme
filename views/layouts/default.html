@@ -91,7 +91,7 @@
       <r:content />
     </r:yield>
 
-    <r:if value1="{$has_calendar}" value2="true" op="=">
+    <r:if expr="{{ NOT(BLANK(page_calendar_url)) }}">
       <r:partial name="custom-patterns/so-calendar-javascript" />
     </r:if>
 
