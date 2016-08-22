@@ -225,6 +225,8 @@ site:
     org_name: "Your Org Name Here"
     masthead_title: "Your Site Title Here"
     masthead_college_link_title: "Your College Title Here"
+    calendar_url: https://calendar.wvu.edu/handlers/query.ashx?id=97c857fee08a4e54978cda2e18491d2e&tenant=&site=academic
+    jquery_defer: false
 
 page:
   id: 1
@@ -246,6 +248,8 @@ page:
       <img src="<%= Faker::Avatar.image %>" alt=" " />
   data:
     slot_01: magic-anytych
+    page_calendar_url: poop
+
 
 pages:
   - id: 2
