@@ -36,5 +36,10 @@
 
 <r:content_for name="page_js">
   <script type="text/javascript" src="https://calendar.wvu.edu/Scripts/core.js"></script>
-  <r:if expr="{{ NOT(BLANK(calendar_feed_page)) }}"><r:page:data name="calendar_feed_page" /></r:if><r:if expr="{{ BLANK(calendar_feed_page) }}"><r:site:data name="calendar_feed" /></r:if>
+  <script type="text/javascript">
+    ActiveData.Events(
+        "https://calendar.wvu.edu/handlers/query.ashx?id=97c857fee08a4e54978cda2e18491d2e&tenant=&site=academic",
+        function (response) {$("#cal").append(response.data);}
+    );
+  </script>
 </r:content_for>
