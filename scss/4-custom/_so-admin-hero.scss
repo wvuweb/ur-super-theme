@@ -7,7 +7,6 @@
   overflow: hidden;
   position: relative;
   a {
-    color: $wvu-gold;
     position: relative;
     z-index: 3;
   }
@@ -26,7 +25,7 @@
       z-index: -3;
     }
   }
-  h1, p, a {
+  h1, p {
     text-shadow: 1px 1px 1px #000000;
   }
   ul {
