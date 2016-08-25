@@ -7,44 +7,55 @@ custom_data_attributes:
 
 <div class="wvu-container">
 
-  <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
+  <r:comment><!-- NOTE: Set how many blog posts you'd like to show per page. Eg: default="10" --></r:comment>
+  <r:set_var name="limit" value="{$limit}" default="10"/>
 
-  <article id="maincontent" class="main wvu-article wvu-article--individual" role="article" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <main id="maincontent" class="main" role="main">
 
-    <r:partial name="custom-patterns/so-page-meta" />
+    <r:blog:articles limit="{$limit}" page="{$page}" tags="{$tags}" tags_op="{$tags_op}" year="{$year}" month="{$month}" day="{$day}">
+      <r:set_var name="article_count" value="{count}" />
 
-    <h1 class="wvu-article__title" itemprop="headline"><r:page:name /></h1>
-    <p class="wvu-article__meta">
-      <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span class="wvu-article__author" itemprop="name">
-          <r:article:author_full_name />
-        </span> <!-- /.wvu-article__author -->
-      </span> <!-- /itemprop="author" -->
-      | <time class="wvu-article__date" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" error_msg="Not Yet Published" /></time>
-    </p> <!-- /.wvu-article__meta -->
-    <div class="wvu-article__body" itemprop="articleBody">
-      <r:editable_region name="article-body" />
-    </div> <!-- /.wvu-article__body -->
-  </article> <!-- /.wvu-article -->
+      <r:if_no_articles>
+        <p>No blog posts found. Try again later, perhaps?</p>
+      </r:if_no_articles>
 
-  <aside class="wvu-sidebar" role="complementary">
-    <h3>Related Articles</h3>
-    <r:blog:articles limit="5" tags="{article:tags}" exclude_ids="{article:id}">
+      <r:comment><!-- NOTE: Blog articles use Schema.org's tags to structure your data & help with SEO: http://goo.gl/SKs4Qb --></r:comment>
+
       <r:if_articles>
-        <ul>
+        <div class="wvu-articles">
           <r:each>
-            <li><a href="<r:article:path />"><r:article:name /></a></li>
+            <article class="wvu-article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
+              <h2 class="wvu-article__title" itemprop="headline"><a href="<r:article:path />"><r:article:name /></a></h2>
+              <p class="wvu-article__meta">
+                <r:article:author_full_name /> |
+                <time class="wvu-article__date" itemprop="datePublished" datetime="<r:date_format format="iso8601" value="{article:published_at}" />"><r:date_format format="%A, %B %d, %Y" value="{article:published_at}" /></time>
+              </p> <!-- /.wvu-article__meta -->
+              <div class="wvu-article__body" itemprop="articleBody">
+                <r:select_html css_selector="p" limit="2">
+                  <r:article:content name="article-body" />
+                </r:select_html>
+              </div> <!-- /.wvu-article__body -->
+              <p><a href="<r:article:path />">Read Full Article</a></p>
+            </article> <!-- /.wvu-article -->
           </r:each>
-        </ul>
+        </div> <!-- /.wvu-articles -->
       </r:if_articles>
-    </r:blog:articles>
 
+      <r:pagination>
+        <ul class="wvu-pagination">
+          <li class="wvu-pagination__older <r:if_last_page>wvu-pagination__disabled</r:if_last_page>"><a href="<r:next_url />" rel="next">&larr; Older Articles</a></li>
+          <li class="wvu-pagination__newer <r:if_first_page>wvu-pagination__disabled</r:if_first_page>"><a href="<r:previous_url />" rel="prev">Newer Articles &rarr;</a></li>
+        </ul>
+      </r:pagination>
+    </r:blog:articles>
+  </main> <!-- /.main -->
+
+  <aside class="wvu-sidebar">
     <div class="wvu-sub-nav">
       <h3>Archives</h3>
       <r:blog:archive:monthly ul_class="wvu-blog-archive" count_class="wvu-blog-archive__count" />
     </div> <!-- /.wvu-sub-nav -->
+    <a href="<r:page:url format="rss" />">Articles RSS Feed</a>
   </aside> <!-- /.wvu-sidebar -->
-
-  <r:comment><!-- Need comments for Blog Articles? See https://disqus.com --></r:comment>
 
 </div> <!-- /.wvu-container -->
