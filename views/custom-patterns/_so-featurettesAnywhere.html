@@ -26,9 +26,14 @@
               </r:page:if_has_content_for>
               <div class="so-featurettes__info so-featurettes__info--<r:var name="soFeaturettesInfoWideAnywhere" />">
                 <h3><a href="<r:page:unless_has_content_for region="so-featurettes__url"><r:page:url /></r:page:unless_has_content_for><r:page:if_has_content_for region="so-featurettes__url"><r:page:content name="so-featurettes__url" /></r:page:if_has_content_for>"><r:page:first_non_blank_attr names="alternate_name,name" /></a></h3>
-                <p>
-                  <r:page:content name="so-page-desc" />
-                </p>
+                <r:if_has_content_for region="so-page-desc">
+                  <p>
+                    <r:page:content name="so-page-desc" />
+                  </p>
+                </r:if>
+                <r:if_has_content_for region="so-page-extras">
+                  <r:page:content name="so-page-extras" />
+                </r:if_has_content_for>
                 <p>
                   <a class="button" href="<r:page:unless_has_content_for region="so-featurettes__url"><r:page:url /></r:page:unless_has_content_for><r:page:if_has_content_for region="so-featurettes__url"><r:page:content name="so-featurettes__url" /></r:page:if_has_content_for>"><r:page:unless_has_content_for region="so-featurettes__link-text">More About <r:page:name /></r:page:unless_has_content_for><r:page:if_has_content_for region="so-featurettes__link-text"><r:page:content name="so-featurettes__link-text" /></r:page:if_has_content_for></a>
                 </p>

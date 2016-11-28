@@ -1,0 +1,65 @@
+---
+layout: default
+custom_data_attributes:
+ - advertisements_id
+ - alternate_url
+ - backpage_has_sidebar
+ - backpage_header
+ - backpage_header_badge
+ - calendar_feed_page
+ - calendar_url
+ - agenda_id
+ - calendar_id
+ - directory_id
+ - featurettes_id
+ - featurettes_2_id
+ - hero
+ - hero_text_alignment
+ - media_id
+ - media_id_2
+ - media_link_text
+ - polyptych_panel_count
+ - profiles_id
+ - search_action
+ - show_instructions
+ - staff_directory_id
+ - testimonials_id
+ - thumbnail_alt
+ - thumbnail_url
+ - slot_01
+ - slot_02
+ - slot_03
+ - slot_04
+ - slot_05
+ - slot_06
+ - slot_07
+---
+
+
+<r:partial name="custom-patterns/so-backpage-header" />
+
+<div class="wvu-container">
+
+  <main id="maincontent" class="<r:page:content name="so-background-color-class--backpage" /> background main <r:if v1="{$backpage_has_sidebar}" v2="false" op="=">main--wide</r:if> <r:edit_mode_only>main--edit-mode</r:edit_mode_only>">
+    <r:partial name="custom-patterns/so-page-meta" />
+
+    <r:edit_mode_only>
+      <p><strong>Main body text:</strong></p>
+    </r:edit_mode_only>
+
+    <r:editable_region name="main">
+
+      <p>Let's see if we can help you find what you're looking for:</p>
+
+      <ul>
+        <li>Check that the web address you entered doesn't contain a typo.</li>
+        <li>Try searching this site for the page you're looking for or enter your seach terms on Search.wvu.edu.</li>
+        <li><a href="http://www.google.com/">Google it</a>.</li>
+      </ul>
+
+    </r:editable_region>
+  </main>
+
+  <r:partial name="custom-patterns/wvu-sidebar" />
+
+</div> <!-- /.wvu-container -->
